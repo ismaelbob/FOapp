@@ -1,0 +1,34 @@
+.azul{
+    color: #487eb0;
+}
+.verde{
+    color: #4cd137;
+}
+.rojo{
+    color: #e84118;
+}
+.amarillo{
+    color: #fbc531;
+}
+
+.negrita{
+    font-weight: bold;
+}
+.cursiva{
+    font-style: italic;
+}
+.centrada{
+    text-align: center;
+}
+.derecha{
+    text-align: right;
+}
+.izquierda{
+    text-align: left;
+}
+.espacio-vertical-md{
+    padding: 8px 0px;
+}
+.espacio-vertical-sm{
+    padding: 4px 0px;
+}

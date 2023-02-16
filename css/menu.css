@@ -1,0 +1,126 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    background: #7f8fa6;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    top: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f3640;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover, .dropdown:hover .dropbtn{
+    background-color: #273c75;
+    transition: .3s;
+}
+nav ul li .dropdown{
+    position: relative;
+    display: inline-block;
+}
+nav ul li .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+nav ul li .dropdown-content a{
+    color: #192a56;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+nav ul li .dropdown-content a:hover{
+    background-color: #dcdde1;
+}
+nav ul .dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+.dropbtn-der{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown-der:hover .dropbtn-der{
+    background-color: #c23616;
+    transition: .3s;
+}
+.dropdown-der{
+    float: right;
+}
+.dropdown-content-der{
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content-der a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+.dropdown-content-der a:hover{
+    background-color: #dcdde1;
+}
+.dropdown-der:hover .dropdown-content-der{
+    display: block;
+}
+
+
+
+
+.submenu{
+    background-color: #dcdde1;
+    padding: 10px;
+}
+.btn-nuevo{
+    border: none;
+    background: #fbc531;
+    padding: 8px 10px;
+    color: white;
+    border-radius: 3px;
+}
+.btn-imprimir{
+    border: none;
+    background: #fbc531;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 13px;
+}
+.btn-nuevo:hover, .btn-imprimir:hover{
+    background: #e1b12c;
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+.overlay{
+    background: rgb(5, 93, 151);
+    background-image: url("../img/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cajon-login{
+    width: 250px;   
+    background: whitesmoke;
+    position: relative;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.cajon-login h3{
+    text-align: center;
+}
+.cajon-login .contenido-central{
+    padding: 15px;
+}
+.cajon-login .contenido-central input[type="text"], .cajon-login .contenido-central input[type="password"]{
+    width: 94%;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.cajon-login .contenido-abajo{
+    padding: 15px;
+    background-color: rgba(128, 128, 128, 0.178);
+}
+.cajon-login .contenido-abajo input[type="submit"]{
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    background: orange;
+}
+.cajon-login .contenido-abajo input[type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(204, 133, 2);
+    color: whitesmoke;
+}
+.img{
+    background-color: rgb(4, 36, 95);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 75px;
+    border-radius: 50%;
+}
+.img img{
+    width: 100%;
+    border-radius: 50%;
+}

@@ -1,0 +1,61 @@
+.tabla-1{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.479);
+    text-align: center;
+}
+.tabla-1 th{
+    color: #40739e;
+    height: 40px;
+    border-bottom: 2px solid #40739e;
+    background-color: #dcdde1;
+}
+.tabla-1 td{
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+/*.tabla-1 tr:nth-child(even){
+    background-color: #e7e7e7;
+}*/
+.tabla-1 tr:hover{
+    background-color: #0097e6;
+    color: whitesmoke;
+}
+.tabla-1 tr:hover .btn-oculto-edit{
+    background-image: url("../img/editar1.png");
+}
+.tabla-1 tr:hover .btn-oculto-del{
+    background-image: url("../img/eliminar1.png");
+}
+.contenedor-tabla{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    overflow: auto;
+}
+
+
+.tabla-2{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.479);
+    text-align: center;
+}
+.tabla-2 th{
+    color: #e1b12c;
+    height: 40px;
+    border-bottom: 2px solid #fbc531;
+    background-color: #dcdde1;
+}
+.tabla-2 td{
+    padding: 5px;
+    border-bottom: 1px solid #fbc531;
+}
+/*.tabla-1 tr:nth-child(even){
+    background-color: #e7e7e7;
+}*/
+.tabla-2 tr:hover{
+    background-color: #e1b12c;
+    color: whitesmoke;
+}
