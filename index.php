@@ -8,6 +8,6 @@
         echo 'Bienvenido ' . $usuarioActivo;
         echo '<input type="button" value="Cerrar sesion"/>';
     } else {
-        echo 'No hay sesion';
+        header('Location: vistas/login.php');
     }
 ?>
