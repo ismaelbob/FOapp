@@ -10,17 +10,21 @@
 <body>
     <div class="overlay">
         <div class="cajon-login">
-            <div class="img">
-                <img src="../img/usuario.png" alt="usuario"/>
-            </div>
-            <h3>Bienvenido</h3>
-            <div class="contenido-central">
-                <input type="text"/>
-                <input type="password"/>
-            </div>
-            <div class="contenido-abajo">
-                <input type="submit" value="Acceder"/>
-            </div>
+           <form method="POST">
+                <div class="img">
+                    <img src="../img/usuario.png" alt="usuario"/>
+                </div>
+                <div class="contenido-central">
+                <h3>Iniciar sesion</h3>
+                    <label for="txtusuario">Usuario:</label>
+                    <input type="text" name="txtusuario" id="txtusuario"/>
+                    <label for="txtpassword">Contraseña:</label>
+                    <input type="password" name="txtpassword" id="txtpassword"/>
+                </div>
+                <div class="contenido-abajo">
+                    <input type="submit" value="Acceder"/>
+                </div>
+           </form>
         </div>
     </div>
 </body>
