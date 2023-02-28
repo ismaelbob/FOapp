@@ -10,7 +10,7 @@
 <body>
     <div class="overlay">
         <div class="cajon-login">
-           <form method="POST">
+           <form method="POST" action="../procesos/iniciarSesion.php">
                 <div class="img">
                     <img src="../img/usuario.png" alt="usuario"/>
                 </div>

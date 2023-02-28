@@ -2,11 +2,10 @@
     include 'includes/sesiones.php';
     $sesiones = new Sesiones();
 
-    $usuarioActivo = $sesiones -> getSesion();
-    
-    if($usuarioActivo === '') {
-        echo 'Bienvenido ' . $usuarioActivo;
-        echo '<input type="button" value="Cerrar sesion"/>';
+    print_r($_SESSION);
+    if(isset($_POST["userfund"])) {
+        echo 'Bienvenido ' . $_SESSION["userfund"];
+        echo '<form method="POST" action="includes/logout.php"><input type="submit" value="Cerrar sesion"/></form>';
     } else {
         header('Location: vistas/login.php');
     }
