@@ -3,9 +3,8 @@
     $sesiones = new Sesiones();
 
     print_r($_SESSION);
-    if(isset($_POST["userfund"])) {
-        echo 'Bienvenido ' . $_SESSION["userfund"];
-        echo '<form method="POST" action="includes/logout.php"><input type="submit" value="Cerrar sesion"/></form>';
+    if(isset($_SESSION["userfund"])) {
+        header('location: tarjeta.php');
     } else {
         header('Location: vistas/login.php');
     }
