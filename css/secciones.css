@@ -19,12 +19,22 @@
     text-align: center;
     font-weight: normal;
 }
+.pnl_principal h5 {
+    padding: 0;
+    margin: 0px 0px 5px 0px;
+    color: #159284;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
 .pnl_datos {
     width: 100%;
     height: 100%;
     margin: 1em;
     padding: 1em;
-    background-color: #e9e9e9;
+    background-color: #f8f8f8;
 }
 .pnl_datos input[type="text"] {
     width: 100%;
@@ -38,9 +48,24 @@
     color: white;
     cursor: pointer;
     border: none;
+    border-radius: 2px;
 }
 .pnl_datos input[type="button"]:hover {
     background-color: #159284;
+}
+.pnl_datos .linea {
+    display: flex;
+    justify-content: space-between;
+}
+.pnl_datos .linea-r {
+    display: flex;
+    justify-content: right  ;
+}
+.pnl_datos button {
+    width: 60%;
+    padding: .5em;
+    margin-bottom: .5em;
+    cursor: pointer;
 }
 
 
@@ -49,14 +74,29 @@
     height: 60%;
     margin: 0em 1em;
     padding: 1em;
-    background-color: #e9e9e9;
+    background-color: #f8f8f8;
 }
+.pnl_tarjeta .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.pnl_tarjeta .fila div {
+    display: flex;
+    justify-content: space-between;
+}
+.pnl_tarjeta input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+}
+
+
 .pnl_menu {
     width: 100%;
     height: 60%;
     margin: 1em;
     padding: 1em;
-    background-color: #e9e9e9;
+    background-color: #f8f8f8;
 }
 .pnl_menu button {
     width: 100%;
@@ -71,7 +111,7 @@
     height: 40%;
     margin: 0em 1em;
     padding: 1em;
-    background-color: #e9e9e9;  
+    background-color: #f8f8f8;  
 }
 
 
@@ -94,27 +134,35 @@
         height: 60%;
         margin: 10px;
         padding: 1em;
-        background-color: #e9e9e9;
+        background-color: #f8f8f8;
     }
     .pnl_tarjeta {
         width: 55%;
         height: 60%;
         margin: 10px 0px;
         padding: 1em;
-        background-color: #e9e9e9;
+        background-color: #f8f8f8;
+    }
+    .pnl_tarjeta .fila {
+        display: flex;
+        justify-content: space-around;
+    }
+    .pnl_tarjeta .fila div {
+        display: flex;
+        justify-content: space-around;
     }
     .pnl_menu {
         width: 19.2%;
         height: 60%;
         margin: 10px;
         padding: 1em;
-        background-color: #e9e9e9;
+        background-color: #f8f8f8;
     }
     .pnl_lista {
         width: 100%;
         height: 40%;
         padding: 1em;
-        background-color: #e9e9e9;  
+        background-color: #f8f8f8;
     }
     .popup-2{
         width: 650px;
