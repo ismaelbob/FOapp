@@ -34,7 +34,7 @@
             <div class="pnl_datos">
                 <h4>Datos</h4>
                 <form action="">
-                    <input type="text" name="txtcodigo" id="txtcodigo">
+                    <div><input type="text" name="txtcodigo" id="txtcodigo"><button class="btn-popup">...</button></div>
                     <input type="button" value="Buscar">
                 </form>
                 <div>
@@ -55,11 +55,14 @@
                         <div class="linea"><h5>Barrio:</h5><span>Trafalgar</span></div>
                     </p>
                 </div>
-                <div class="linea-r"><button>Editar</button></div>
+                <div class="linea-r"><button class="btn-edit">Editar</button></div>
             </div>
             <div class="pnl_tarjeta">
                 <h4>Mi Tarjeta</h4>
-                <h5>Reuniones</h5>
+                <div class="fila-titulo">
+                    <h5>Reuniones</h5>
+                    <div><label for="chkfull-reu">Marcar todo</label><input type="checkbox" id="chkfull-reu" name="chkfull-reu"/></div>
+                </div>
                 <div class="fila">
                     <div>
                         <label for="chkene">E</label>
@@ -90,11 +93,11 @@
                         <input type="checkbox" name="chkdic" id="chkdic"/>
                     </div>
                 </div>
-                <br/>
-                <br/>
                 <h5>Aportes</h5>
-                <br/>
-                <h5>Hijo 1</h5>
+                <div class="fila-titulo">
+                    <h5>Hijo 1</h5>
+                    <div><label for="chkfull-hijo1">Marcar todo</label><input type="checkbox" id="chkfull-hijo1" name="chkfull-hijo1"/></div>
+                </div>
                 <div class="fila">
                     <div>
                         <label for="chkene-1">E</label>
@@ -125,8 +128,10 @@
                         <input type="checkbox" name="chkdic-1" id="chkdic-1"/>
                     </div>
                 </div>
-                <br/>
-                <h5>Hijo 2</h5>
+                <div class="fila-titulo">
+                    <h5>Hijo 2</h5>
+                    <div><label for="chkfull-hijo2">Marcar todo</label><input type="checkbox" id="chkfull-hijo2" name="chkfull-hijo2"/></div>
+                </div>
                 <div class="fila">
                     <div>
                         <label for="chkene-2">E</label>
@@ -157,8 +162,10 @@
                         <input type="checkbox" name="chkdic-2" id="chkdic-2"/>
                     </div>
                 </div>
-                <br/>
-                <h5>Hijo 3</h5>
+                <div class="fila-titulo">
+                    <h5>Hijo 3</h5>
+                    <div><label for="chkfull-hijo3">Marcar todo</label><input type="checkbox" id="chkfull-hijo3" name="chkfull-hijo3"/></div>
+                </div>
                 <div class="fila">
                     <div>
                         <label for="chkene-3">E</label>
@@ -189,7 +196,19 @@
                         <input type="checkbox" name="chkdic-3" id="chkdic-3"/>
                     </div>
                 </div>
-                <br/>
+                <h5>Otros</h5>
+                <div class="columna">
+                    <div>
+                        <div><label for="chkrv-1">Revision médica</label><input type="checkbox" id="chkrv-1" name="chkrv-1"/></div>
+                        <div><label for="chkrv-2">Revision médica</label><input type="checkbox" id="chkrv-2" name="chkrv-2"/></div>
+                        <div><label for="chkrv-3">Revision médica</label><input type="checkbox" id="chkrv-3" name="chkrv-3"/></div>
+                    </div>
+                    <div>
+                        <div><label for="chkkm-1">Kermesse</label><input type="checkbox" id="chkkm-1" name="chkkm-1"/></div>
+                        <div><label for="chkkm-2">Kermesse</label><input type="checkbox" id="chkkm-2" name="chkkm-2"/></div>
+                        <div><label for="chkkm-3">Kermesse</label><input type="checkbox" id="chkkm-3" name="chkkm-3"/></div>
+                    </div>
+                </div>
             </div>
             <div class="pnl_menu">
                 <h4>Acciones</h4>
@@ -197,7 +216,7 @@
                 <button>Multa</button>
             </div>
             <div class="pnl_lista">
-                <h4>Detalles</h4>
+                <h4></h4>
             </div>
         </div>
     </div>
