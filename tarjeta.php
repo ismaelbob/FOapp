@@ -12,6 +12,10 @@
     <title>Mi Tarjeta | FO</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/secciones.css">
+    <link rel="stylesheet" href="librerias/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="librerias/alertifyjs/css/themes/default.css">
+    <script src="librerias/jquery-3.4.1.min.js"></script>
+    <script src="librerias/alertifyjs/alertify.js"></script>
 </head>
 <body>
     <header>
@@ -35,7 +39,7 @@
                 <h4>Datos</h4>
                 <form action="">
                     <div><input type="text" name="txtcodigo" id="txtcodigo"><button class="btn-popup">...</button></div>
-                    <input type="button" value="Buscar">
+                    <input id="btnbuscar" type="button" value="Buscar">
                 </form>
                 <div>
                     <p>
@@ -221,6 +225,7 @@
         </div>
     </div>
 </body>
+<script src="js/tarjeta.js"></script>
 </html>
 <?php
     } else {
