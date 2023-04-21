@@ -38,25 +38,25 @@
             <div class="pnl_datos">
                 <h4>Datos</h4>
                 <form action="">
-                    <div><input type="text" name="txtcodigo" id="txtcodigo"><button class="btn-popup">...</button></div>
+                    <div><input type="number" name="txtcodigo" id="txtcodigo"><button class="btn-popup">...</button></div>
                     <input id="btnbuscar" type="button" value="Buscar">
                 </form>
                 <div>
                     <p>
-                        <div class="linea"><h5>ID de familia:</h5><span>0001</span></div>
-                        <div class="linea"><h5>Padre:</h5><span>José Pérez</span></div>
-                        <div class="linea"><h5>Madre:</h5><span>Maria Mamani</span></div>
+                        <div class="linea"><h5>ID de familia:</h5><span id="idhogar"></span></div>
+                        <div class="linea"><h5>Padre:</h5><span id="padre"></span></div>
+                        <div class="linea"><h5>Madre:</h5><span id="madre"></span></div>
                     </p>
                     <p>
-                        <div class="linea"><h5>Hijos inscritos:</h5><span>2</span></div>
-                        <div class="linea"><h5>Hijo 1:</h5><span>Juan Jose Perez Mamani</span></div>
-                        <div class="linea"><h5>Hijo 2:</h5><span>Marisol Perez Mamani</span></div>
-                        <div class="linea"><h5>Hijo 3:</h5><span></span></div>
+                        <div class="linea"><h5>Hijos inscritos:</h5><span id="cantidad"></span></div>
+                        <div class="linea"><h5>Hijo 1:</h5><span id="hijo1"></span></div>
+                        <div class="linea"><h5>Hijo 2:</h5><span id="hijo2"></span></div>
+                        <div class="linea"><h5>Hijo 3:</h5><span id="hijo3"></span></div>
                     </p>
                     <p>
-                        <div class="linea"><h5>Telefono 1:</h5><span>76565454</span></div>
-                        <div class="linea"><h5>Telefono 2:</h5><span>76565433</span></div>
-                        <div class="linea"><h5>Barrio:</h5><span>Trafalgar</span></div>
+                        <div class="linea"><h5>Telefono 1:</h5><span id="tel1"></span></div>
+                        <div class="linea"><h5>Telefono 2:</h5><span id="tel2"></span></div>
+                        <div class="linea"><h5>Barrio:</h5><span></span></div>
                     </p>
                 </div>
                 <div class="linea-r"><button class="btn-edit">Editar</button></div>

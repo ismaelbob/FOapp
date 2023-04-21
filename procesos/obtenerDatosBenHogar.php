@@ -4,7 +4,12 @@
 
     if(isset($_POST["cod"])){
         $cod = $_POST["cod"];   
-        $respuesta = $ben -> obtenerDatosBenHogar($cod);
-        echo json_encode($respuesta);
+        $idhogar = $ben -> obtenerIdHogar($cod);
+        if($idhogar <> '') {
+            $respuesta = $ben -> obtenerDatosBenHogar($idhogar);
+            echo json_encode($respuesta);
+        } else {
+            echo 'error';
+        }
     }
 ?>

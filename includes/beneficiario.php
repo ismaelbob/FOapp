@@ -32,6 +32,11 @@
             $datos = $con -> fetch(PDO::FETCH_OBJ);
             return $datos;
         }
+        public function obtenerIdHogar($cod){
+            $con = $this -> conectar() -> query("SELECT hogar FROM beneficiario WHERE idbeneficiario=$cod");
+            $idhogar = $con -> fetch(PDO::FETCH_OBJ)->hogar;
+            return $idhogar;
+        }
         public function obtenerNombresBen($c){
             return $con = $this->conectar()->query("SELECT * FROM beneficiario WHERE idbeneficiario=$c;"); 
         }
@@ -47,8 +52,8 @@
         }
 
         public function obtenerDatosBenHogar($c){
-            $con = $this->conectar()->query("SELECT * FROM beneficiario b JOIN hogar h ON b.hogar=h.idhogar WHERE b.idbeneficiario=" . $c);
-            $datos = $con -> fetch(PDO::FETCH_OBJ);
+            $con = $this->conectar()->query("SELECT * FROM beneficiario b JOIN hogar h ON b.hogar=h.idhogar WHERE h.idhogar=" . $c);
+            $datos = $con -> fetchAll();
             return $datos;
         }
         public function obtenerDatosBenHogarPPFF($cod, $hog){
