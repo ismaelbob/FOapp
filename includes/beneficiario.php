@@ -34,8 +34,12 @@
         }
         public function obtenerIdHogar($cod){
             $con = $this -> conectar() -> query("SELECT hogar FROM beneficiario WHERE idbeneficiario=$cod");
-            $idhogar = $con -> fetch(PDO::FETCH_OBJ)->hogar;
-            return $idhogar;
+            if ($con -> rowCount() > 0) {
+                $idhogar = $con -> fetch(PDO::FETCH_OBJ)->hogar;
+                return $idhogar;
+            } else {
+                return "error";
+            }
         }
         public function obtenerNombresBen($c){
             return $con = $this->conectar()->query("SELECT * FROM beneficiario WHERE idbeneficiario=$c;"); 

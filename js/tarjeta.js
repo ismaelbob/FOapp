@@ -16,6 +16,8 @@ $(document).ready(() => {
                         if (datos.length === 1) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
                             $('#hijo1').html(nombrehijo1)
+                            $('#hijo2').html('')
+                            $('#hijo3').html('')
                             $('#cantidad').html('1')
                         }
                         if (datos.length === 2) {
@@ -23,6 +25,7 @@ $(document).ready(() => {
                             $('#hijo1').html(nombrehijo1)
                             nombrehijo2 = datos[1].nombres + ' ' + datos[1].paterno + ' ' + datos[1].materno
                             $('#hijo2').html(nombrehijo2)
+                            $('#hijo3').html('')
                             $('#cantidad').html('2')
                         }
                         if (datos.length === 3) {
@@ -35,14 +38,19 @@ $(document).ready(() => {
                             $('#cantidad').html('3')
                         }
                     } else {
+                        alertify.set('notifier','position', 'top-right');
                         alertify.error('El codigo ingresado, no existe')
                         $('#txtcodigo').focus()
                     }
                 },
             })
         } else {
+            alertify.set('notifier','position', 'top-right');
             alertify.error('Ingrese un codigo para buscar')
             $('#txtcodigo').focus()
         }
     })
+
+
+    //
 })

@@ -37,10 +37,10 @@
         <div class="pnl_principal">
             <div class="pnl_datos">
                 <h4>Datos</h4>
-                <form action="">
-                    <div><input type="number" name="txtcodigo" id="txtcodigo"><button class="btn-popup">...</button></div>
+                <div>
+                    <div><input type="number" name="txtcodigo" id="txtcodigo"/><button class="btn-popup">...</button></div>
                     <input id="btnbuscar" type="button" value="Buscar">
-                </form>
+                </div>
                 <div>
                     <p>
                         <div class="linea"><h5>ID de familia:</h5><span id="idhogar"></span></div>
