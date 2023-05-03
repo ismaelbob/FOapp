@@ -56,7 +56,7 @@
         }
 
         public function obtenerDatosBenHogar($c){
-            $con = $this->conectar()->query("SELECT * FROM beneficiario b JOIN hogar h ON b.hogar=h.idhogar WHERE h.idhogar=" . $c);
+            $con = $this->conectar()->query("SELECT * FROM beneficiario b JOIN hogar h ON b.hogar=h.idhogar WHERE h.idhogar=$c AND b.estado='activo';");
             $datos = $con -> fetchAll();
             return $datos;
         }

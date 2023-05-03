@@ -12,9 +12,14 @@
             $con = null;
         }
         function aportesBeneficiario($ben, $gestion){
-            $con = $this -> conectar() -> query("SELECT * FROM cobro WHERE idbeneficiario=$ben AND gestion=$gestion");
-            $datos = $con -> fetch(PDO::FETCH_OBJ);
-            return $datos;
+            $con = $this -> conectar() -> query("SELECT * FROM aporte WHERE idbeneficiario=$ben AND gestion=$gestion");
+            if ($con -> rowCount() > 0) {
+                $datos = $con -> fetch(PDO::FETCH_OBJ);
+                return $datos;
+            } else {
+                return "Sin datos de aporte";
+            }
+            $con = null;
         }
         function ultimoAporte($ben){
             $con = $this -> conectar() -> query("SELECT idaporte AS ultimo FROM aporte WHERE idbeneficiario=$ben ORDER BY idaporte DESC LIMIT 1");

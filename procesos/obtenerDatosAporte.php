@@ -4,9 +4,15 @@
 
     if(isset($_POST["cod"])){
         $cod = $_POST["cod"];
-        $ges = $_POST["ges"];
+        $ges = 2023;
         
-        echo json_encode($aporte -> aportesBeneficiario($cod, $ges));
+        $respuesta = $aporte -> aportesBeneficiario($cod, $ges);
+
+        if ($respuesta <> "Sin datos de aporte") {
+            echo json_encode($respuesta);
+        } else {
+            echo $respuesta;
+        }
     }else{
         echo "error";
     }
