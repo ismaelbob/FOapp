@@ -21,7 +21,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="active">Mi tarjeta</a></li>
+                <li><a href="tarjeta.php" class="active">Mi tarjeta</a></li>
+                <li><a href="asistencia.php">Asistencia</a></li>
                 <li><a href="#">Administrar</a></li>
                 <div class="dropdown">
                     <button class="dropbtn"><?php echo $_SESSION["userfund"] ?></button>
@@ -69,32 +70,32 @@
                 </div>
                 <div class="fila">
                     <div>
-                        <label for="chkene">E</label>
-                        <label for="chkfeb">F</label>
-                        <label for="chkmar">M</label>
-                        <label for="chkabr">A</label>
-                        <label for="chkmay">M</label>
-                        <label for="chkjun">J</label>
-                        <label for="chkjul">J</label>
-                        <label for="chkago">A</label>
-                        <label for="chksep">S</label>
-                        <label for="chkoct">O</label>
-                        <label for="chknov">N</label>
-                        <label for="chkdic">D</label>
+                        <label for="chkreunion-1">E</label>
+                        <label for="chkreunion-2">F</label>
+                        <label for="chkreunion-3">M</label>
+                        <label for="chkreunion-4">A</label>
+                        <label for="chkreunion-5">M</label>
+                        <label for="chkreunion-6">J</label>
+                        <label for="chkreunion-7">J</label>
+                        <label for="chkreunion-8">A</label>
+                        <label for="chkreunion-9">S</label>
+                        <label for="chkreunion-10">O</label>
+                        <label for="chkreunion-11">N</label>
+                        <label for="chkreunion-12">D</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="chkene" id="chkene"/>
-                        <input type="checkbox" name="chkfeb" id="chkfeb"/>
-                        <input type="checkbox" name="chkmar" id="chkmar"/>
-                        <input type="checkbox" name="chkabr" id="chkabr"/>
-                        <input type="checkbox" name="chkmay" id="chkmay"/>
-                        <input type="checkbox" name="chkjun" id="chkjun"/>
-                        <input type="checkbox" name="chkjul" id="chkjul"/>
-                        <input type="checkbox" name="chkago" id="chkago"/>
-                        <input type="checkbox" name="chksep" id="chksep"/>
-                        <input type="checkbox" name="chkoct" id="chkoct"/>
-                        <input type="checkbox" name="chknov" id="chknov"/>
-                        <input type="checkbox" name="chkdic" id="chkdic"/>
+                        <input type="checkbox" name="chkreunion-1" id="chkreunion-1"/>
+                        <input type="checkbox" name="chkreunion-2" id="chkreunion-2"/>
+                        <input type="checkbox" name="chkreunion-3" id="chkreunion-3"/>
+                        <input type="checkbox" name="chkreunion-4" id="chkreunion-4"/>
+                        <input type="checkbox" name="chkreunion-5" id="chkreunion-5"/>
+                        <input type="checkbox" name="chkreunion-6" id="chkreunion-6"/>
+                        <input type="checkbox" name="chkreunion-7" id="chkreunion-7"/>
+                        <input type="checkbox" name="chkreunion-8" id="chkreunion-8"/>
+                        <input type="checkbox" name="chkreunion-9" id="chkreunion-9"/>
+                        <input type="checkbox" name="chkreunion-10" id="chkreunion-10"/>
+                        <input type="checkbox" name="chkreunion-11" id="chkreunion-11"/>
+                        <input type="checkbox" name="chkreunion-12" id="chkreunion-12"/>
                     </div>
                 </div>
                 <h5>Aportes</h5>
@@ -104,32 +105,32 @@
                 </div>
                 <div class="fila">
                     <div>
-                        <label for="chkene-1">E</label>
-                        <label for="chkfeb-1">F</label>
-                        <label for="chkmar-1">M</label>
-                        <label for="chkabr-1">A</label>
-                        <label for="chkmay-1">M</label>
-                        <label for="chkjun-1">J</label>
-                        <label for="chkjul-1">J</label>
-                        <label for="chkago-1">A</label>
-                        <label for="chksep-1">S</label>
-                        <label for="chkoct-1">O</label>
-                        <label for="chknov-1">N</label>
-                        <label for="chkdic-1">D</label>
+                        <label for="chkapo1-1">E</label>
+                        <label for="chkapo1-2">F</label>
+                        <label for="chkapo1-3">M</label>
+                        <label for="chkapo1-4">A</label>
+                        <label for="chkapo1-5">M</label>
+                        <label for="chkapo1-6">J</label>
+                        <label for="chkapo1-7">J</label>
+                        <label for="chkapo1-8">A</label>
+                        <label for="chkapo1-9">S</label>
+                        <label for="chkapo1-10">O</label>
+                        <label for="chkapo1-11">N</label>
+                        <label for="chkapo1-12">D</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="chkene-1" id="chkene-1"/>
-                        <input type="checkbox" name="chkfeb-1" id="chkfeb-1"/>
-                        <input type="checkbox" name="chkmar-1" id="chkmar-1"/>
-                        <input type="checkbox" name="chkabr-1" id="chkabr-1"/>
-                        <input type="checkbox" name="chkmay-1" id="chkmay-1"/>
-                        <input type="checkbox" name="chkjun-1" id="chkjun-1"/>
-                        <input type="checkbox" name="chkjul-1" id="chkjul-1"/>
-                        <input type="checkbox" name="chkago-1" id="chkago-1"/>
-                        <input type="checkbox" name="chksep-1" id="chksep-1"/>
-                        <input type="checkbox" name="chkoct-1" id="chkoct-1"/>
-                        <input type="checkbox" name="chknov-1" id="chknov-1"/>
-                        <input type="checkbox" name="chkdic-1" id="chkdic-1"/>
+                        <input type="checkbox" name="chkapo1-1" id="chkapo1-1"/>
+                        <input type="checkbox" name="chkapo1-2" id="chkapo1-2"/>
+                        <input type="checkbox" name="chkapo1-3" id="chkapo1-3"/>
+                        <input type="checkbox" name="chkapo1-4" id="chkapo1-4"/>
+                        <input type="checkbox" name="chkapo1-5" id="chkapo1-5"/>
+                        <input type="checkbox" name="chkapo1-6" id="chkapo1-6"/>
+                        <input type="checkbox" name="chkapo1-7" id="chkapo1-7"/>
+                        <input type="checkbox" name="chkapo1-8" id="chkapo1-8"/>
+                        <input type="checkbox" name="chkapo1-9" id="chkapo1-9"/>
+                        <input type="checkbox" name="chkapo1-10" id="chkapo1-10"/>
+                        <input type="checkbox" name="chkapo1-11" id="chkapo1-11"/>
+                        <input type="checkbox" name="chkapo1-12" id="chkapo1-12"/>
                     </div>
                 </div>
                 <div class="fila-titulo">
@@ -138,32 +139,32 @@
                 </div>
                 <div class="fila">
                     <div>
-                        <label for="chkene-2">E</label>
-                        <label for="chkfeb-2">F</label>
-                        <label for="chkmar-2">M</label>
-                        <label for="chkabr-2">A</label>
-                        <label for="chkmay-2">M</label>
-                        <label for="chkjun-2">J</label>
-                        <label for="chkjul-2">J</label>
-                        <label for="chkago-2">A</label>
-                        <label for="chksep-2">S</label>
-                        <label for="chkoct-2">O</label>
-                        <label for="chknov-2">N</label>
-                        <label for="chkdic-2">D</label>
+                        <label for="chkapo2-1">E</label>
+                        <label for="chkapo2-2">F</label>
+                        <label for="chkapo2-3">M</label>
+                        <label for="chkapo2-4">A</label>
+                        <label for="chkapo2-5">M</label>
+                        <label for="chkapo2-6">J</label>
+                        <label for="chkapo2-7">J</label>
+                        <label for="chkapo2-8">A</label>
+                        <label for="chkapo2-9">S</label>
+                        <label for="chkapo2-10">O</label>
+                        <label for="chkapo2-11">N</label>
+                        <label for="chkapo2-12">D</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="chkene-2" id="chkene-2"/>
-                        <input type="checkbox" name="chkfeb-2" id="chkfeb-2"/>
-                        <input type="checkbox" name="chkmar-2" id="chkmar-2"/>
-                        <input type="checkbox" name="chkabr-2" id="chkabr-2"/>
-                        <input type="checkbox" name="chkmay-2" id="chkmay-2"/>
-                        <input type="checkbox" name="chkjun-2" id="chkjun-2"/>
-                        <input type="checkbox" name="chkjul-2" id="chkjul-2"/>
-                        <input type="checkbox" name="chkago-2" id="chkago-2"/>
-                        <input type="checkbox" name="chksep-2" id="chksep-2"/>
-                        <input type="checkbox" name="chkoct-2" id="chkoct-2"/>
-                        <input type="checkbox" name="chknov-2" id="chknov-2"/>
-                        <input type="checkbox" name="chkdic-2" id="chkdic-2"/>
+                        <input type="checkbox" name="chkapo2-1" id="chkapo2-1"/>
+                        <input type="checkbox" name="chkapo2-2" id="chkapo2-2"/>
+                        <input type="checkbox" name="chkapo2-3" id="chkapo2-3"/>
+                        <input type="checkbox" name="chkapo2-4" id="chkapo2-4"/>
+                        <input type="checkbox" name="chkapo2-5" id="chkapo2-5"/>
+                        <input type="checkbox" name="chkapo2-6" id="chkapo2-6"/>
+                        <input type="checkbox" name="chkapo2-7" id="chkapo2-7"/>
+                        <input type="checkbox" name="chkapo2-8" id="chkapo2-8"/>
+                        <input type="checkbox" name="chkapo2-9" id="chkapo2-9"/>
+                        <input type="checkbox" name="chkapo2-10" id="chkapo2-10"/>
+                        <input type="checkbox" name="chkapo2-11" id="chkapo2-11"/>
+                        <input type="checkbox" name="chkapo2-12" id="chkapo2-12"/>
                     </div>
                 </div>
                 <div class="fila-titulo">
@@ -172,32 +173,32 @@
                 </div>
                 <div class="fila">
                     <div>
-                        <label for="chkene-3">E</label>
-                        <label for="chkfeb-3">F</label>
-                        <label for="chkmar-3">M</label>
-                        <label for="chkabr-3">A</label>
-                        <label for="chkmay-3">M</label>
-                        <label for="chkjun-3">J</label>
-                        <label for="chkjul-3">J</label>
-                        <label for="chkago-3">A</label>
-                        <label for="chksep-3">S</label>
-                        <label for="chkoct-3">O</label>
-                        <label for="chknov-3">N</label>
-                        <label for="chkdic-3">D</label>
+                        <label for="chkapo3-1">E</label>
+                        <label for="chkapo3-2">F</label>
+                        <label for="chkapo3-3">M</label>
+                        <label for="chkapo3-4">A</label>
+                        <label for="chkapo3-5">M</label>
+                        <label for="chkapo3-6">J</label>
+                        <label for="chkapo3-7">J</label>
+                        <label for="chkapo3-8">A</label>
+                        <label for="chkapo3-9">S</label>
+                        <label for="chkapo3-10">O</label>
+                        <label for="chkapo3-11">N</label>
+                        <label for="chkapo3-12">D</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="chkene-3" id="chkene-3"/>
-                        <input type="checkbox" name="chkfeb-3" id="chkfeb-3"/>
-                        <input type="checkbox" name="chkmar-3" id="chkmar-3"/>
-                        <input type="checkbox" name="chkabr-3" id="chkabr-3"/>
-                        <input type="checkbox" name="chkmay-3" id="chkmay-3"/>
-                        <input type="checkbox" name="chkjun-3" id="chkjun-3"/>
-                        <input type="checkbox" name="chkjul-3" id="chkjul-3"/>
-                        <input type="checkbox" name="chkago-3" id="chkago-3"/>
-                        <input type="checkbox" name="chksep-3" id="chksep-3"/>
-                        <input type="checkbox" name="chkoct-3" id="chkoct-3"/>
-                        <input type="checkbox" name="chknov-3" id="chknov-3"/>
-                        <input type="checkbox" name="chkdic-3" id="chkdic-3"/>
+                        <input type="checkbox" name="chkapo3-1" id="chkapo3-1"/>
+                        <input type="checkbox" name="chkapo3-2" id="chkapo3-2"/>
+                        <input type="checkbox" name="chkapo3-3" id="chkapo3-3"/>
+                        <input type="checkbox" name="chkapo3-4" id="chkapo3-4"/>
+                        <input type="checkbox" name="chkapo3-5" id="chkapo3-5"/>
+                        <input type="checkbox" name="chkapo3-6" id="chkapo3-6"/>
+                        <input type="checkbox" name="chkapo3-7" id="chkapo3-7"/>
+                        <input type="checkbox" name="chkapo3-8" id="chkapo3-8"/>
+                        <input type="checkbox" name="chkapo3-9" id="chkapo3-9"/>
+                        <input type="checkbox" name="chkapo3-10" id="chkapo3-10"/>
+                        <input type="checkbox" name="chkapo3-11" id="chkapo3-11"/>
+                        <input type="checkbox" name="chkapo3-12" id="chkapo3-12"/>
                     </div>
                 </div>
                 <h5>Otros</h5>

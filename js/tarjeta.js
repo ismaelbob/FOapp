@@ -1,7 +1,6 @@
 $(document).ready(() => {
     $('#btnbuscar').click(() => {
         if ($('#txtcodigo').val() !== '') {
-            console.log('1: Buscando codigos')
             $.ajax({
                 data: 'cod=' + $('#txtcodigo').val(),
                 url: 'procesos/obtenerDatosBenHogar.php',
@@ -9,7 +8,6 @@ $(document).ready(() => {
                 success: (res) => {
                     if (res !== 'error') {
                         datos = jQuery.parseJSON(res)
-                        console.log('2: Acabe de buscar codigo')
                         $('#idhogar').html(datos[0].hogar)
                         $('#padre').html(datos[0].padre)
                         $('#madre').html(datos[0].madre)
@@ -21,6 +19,29 @@ $(document).ready(() => {
                             $('#hijo2').html('')
                             $('#hijo3').html('')
                             $('#cantidad').html('1')
+
+                            $.ajax({
+                                data: 'cod=' + datos[0].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes1 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes1.ene, $('#chkapo1-1'))
+                                    colocarCheck(aportes1.feb, $('#chkapo1-2'))
+                                    colocarCheck(aportes1.mar, $('#chkapo1-3'))
+                                    colocarCheck(aportes1.abr, $('#chkapo1-4'))
+                                    colocarCheck(aportes1.may, $('#chkapo1-5'))
+                                    colocarCheck(aportes1.jun, $('#chkapo1-6'))
+                                    colocarCheck(aportes1.jul, $('#chkapo1-7'))
+                                    colocarCheck(aportes1.ago, $('#chkapo1-8'))
+                                    colocarCheck(aportes1.sep, $('#chkapo1-9'))
+                                    colocarCheck(aportes1.oct, $('#chkapo1-10'))
+                                    colocarCheck(aportes1.nov, $('#chkapo1-11'))
+                                    colocarCheck(aportes1.dic, $('#chkapo1-12'))
+                                },
+                            })
+                            cambiarCheck($('#chkapo2-1'), $('#chkapo2-2'), $('#chkapo2-3'), $('#chkapo2-4'), $('#chkapo2-5'), $('#chkapo2-6'), $('#chkapo2-7'), $('#chkapo2-8'), $('#chkapo2-9'), $('#chkapo2-10'), $('#chkapo2-11'), $('#chkapo2-12'), false)
+                            cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
                         }
                         if (datos.length === 2) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -29,6 +50,49 @@ $(document).ready(() => {
                             $('#hijo2').html(nombrehijo2)
                             $('#hijo3').html('')
                             $('#cantidad').html('2')
+
+                            $.ajax({
+                                data: 'cod=' + datos[0].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes1 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes1.ene, $('#chkapo1-1'))
+                                    colocarCheck(aportes1.feb, $('#chkapo1-2'))
+                                    colocarCheck(aportes1.mar, $('#chkapo1-3'))
+                                    colocarCheck(aportes1.abr, $('#chkapo1-4'))
+                                    colocarCheck(aportes1.may, $('#chkapo1-5'))
+                                    colocarCheck(aportes1.jun, $('#chkapo1-6'))
+                                    colocarCheck(aportes1.jul, $('#chkapo1-7'))
+                                    colocarCheck(aportes1.ago, $('#chkapo1-8'))
+                                    colocarCheck(aportes1.sep, $('#chkapo1-9'))
+                                    colocarCheck(aportes1.oct, $('#chkapo1-10'))
+                                    colocarCheck(aportes1.nov, $('#chkapo1-11'))
+                                    colocarCheck(aportes1.dic, $('#chkapo1-12'))
+                                },
+                            })
+                            $.ajax({
+                                data: 'cod=' + datos[1].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes2 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes2.ene, $('#chkapo2-1'))
+                                    colocarCheck(aportes2.feb, $('#chkapo2-2'))
+                                    colocarCheck(aportes2.mar, $('#chkapo2-3'))
+                                    colocarCheck(aportes2.abr, $('#chkapo2-4'))
+                                    colocarCheck(aportes2.may, $('#chkapo2-5'))
+                                    colocarCheck(aportes2.jun, $('#chkapo2-6'))
+                                    colocarCheck(aportes2.jul, $('#chkapo2-7'))
+                                    colocarCheck(aportes2.ago, $('#chkapo2-8'))
+                                    colocarCheck(aportes2.sep, $('#chkapo2-9'))
+                                    colocarCheck(aportes2.oct, $('#chkapo2-10'))
+                                    colocarCheck(aportes2.nov, $('#chkapo2-11'))
+                                    colocarCheck(aportes2.dic, $('#chkapo2-12'))
+                                },
+                            })
+
+                            cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
                         }
                         if (datos.length === 3) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -38,122 +102,99 @@ $(document).ready(() => {
                             nombrehijo3 = datos[2].nombres + ' ' + datos[2].paterno + ' ' + datos[2].materno
                             $('#hijo3').html(nombrehijo3)
                             $('#cantidad').html('3')
+
+                            $.ajax({
+                                data: 'cod=' + datos[0].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes1 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes1.ene, $('#chkapo1-1'))
+                                    colocarCheck(aportes1.feb, $('#chkapo1-2'))
+                                    colocarCheck(aportes1.mar, $('#chkapo1-3'))
+                                    colocarCheck(aportes1.abr, $('#chkapo1-4'))
+                                    colocarCheck(aportes1.may, $('#chkapo1-5'))
+                                    colocarCheck(aportes1.jun, $('#chkapo1-6'))
+                                    colocarCheck(aportes1.jul, $('#chkapo1-7'))
+                                    colocarCheck(aportes1.ago, $('#chkapo1-8'))
+                                    colocarCheck(aportes1.sep, $('#chkapo1-9'))
+                                    colocarCheck(aportes1.oct, $('#chkapo1-10'))
+                                    colocarCheck(aportes1.nov, $('#chkapo1-11'))
+                                    colocarCheck(aportes1.dic, $('#chkapo1-12'))
+                                },
+                            })
+                            $.ajax({
+                                data: 'cod=' + datos[1].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes2 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes2.ene, $('#chkapo2-1'))
+                                    colocarCheck(aportes2.feb, $('#chkapo2-2'))
+                                    colocarCheck(aportes2.mar, $('#chkapo2-3'))
+                                    colocarCheck(aportes2.abr, $('#chkapo2-4'))
+                                    colocarCheck(aportes2.may, $('#chkapo2-5'))
+                                    colocarCheck(aportes2.jun, $('#chkapo2-6'))
+                                    colocarCheck(aportes2.jul, $('#chkapo2-7'))
+                                    colocarCheck(aportes2.ago, $('#chkapo2-8'))
+                                    colocarCheck(aportes2.sep, $('#chkapo2-9'))
+                                    colocarCheck(aportes2.oct, $('#chkapo2-10'))
+                                    colocarCheck(aportes2.nov, $('#chkapo2-11'))
+                                    colocarCheck(aportes2.dic, $('#chkapo2-12'))
+                                },
+                            })
+                            $.ajax({
+                                data: 'cod=' + datos[2].idbeneficiario,
+                                url: 'procesos/obtenerDatosAporte.php',
+                                type: 'post',
+                                success: (res) => {
+                                    aportes3 = jQuery.parseJSON(res)
+                                    colocarCheck(aportes3.ene, $('#chkapo3-1'))
+                                    colocarCheck(aportes3.feb, $('#chkapo3-2'))
+                                    colocarCheck(aportes3.mar, $('#chkapo3-3'))
+                                    colocarCheck(aportes3.abr, $('#chkapo3-4'))
+                                    colocarCheck(aportes3.may, $('#chkapo3-5'))
+                                    colocarCheck(aportes3.jun, $('#chkapo3-6'))
+                                    colocarCheck(aportes3.jul, $('#chkapo3-7'))
+                                    colocarCheck(aportes3.ago, $('#chkapo3-8'))
+                                    colocarCheck(aportes3.sep, $('#chkapo3-9'))
+                                    colocarCheck(aportes3.oct, $('#chkapo3-10'))
+                                    colocarCheck(aportes3.nov, $('#chkapo3-11'))
+                                    colocarCheck(aportes3.dic, $('#chkapo3-12'))
+                                },
+                            })
                         }
 
-                        console.log('3: Buscando participaciones')
                         $.ajax({
                             data: 'cod=' + $('#txtcodigo').val(),
                             url: 'procesos/obtenerDatosReunion.php',
                             type: 'post',
                             success: (res) => {
                                 data = jQuery.parseJSON(res)
-                                console.log('4: Acade de buscar participaciones')
-                                if (data.r1 === 'p') {
-                                    $('#chkene').prop('checked', true)
-                                    $('#chkene').prop('disabled', true)
-                                } else {
-                                    $('#chkene').prop('checked', false)
-                                    $('#chkene').prop('disabled', false)
-                                }
-                                if (data.r2 === 'p') {
-                                    $('#chkfeb').prop('checked', true)
-                                }else {
-                                    $('#chkfeb').prop('checked', false)
-                                }
-                                if (data.r3 === 'p') {
-                                    $('#chkmar').prop('checked', true)
-                                }else {
-                                    $('#chkmar').prop('checked', false)
-                                }
-                                if (data.r4 === 'p') {
-                                    $('#chkabr').prop('checked', true)
-                                }else {
-                                    $('#chkabr').prop('checked', false)
-                                }
-                                if (data.r5 === 'p') {
-                                    $('#chkmay').prop('checked', true)
-                                }else {
-                                    $('#chkmay').prop('checked', false)
-                                }
-                                if (data.r6 === 'p') {
-                                    $('#chkjun').prop('checked', true)
-                                }else {
-                                    $('#chkjun').prop('checked', false)
-                                }
-                                if (data.r7 === 'p') {
-                                    $('#chkjul').prop('checked', true)
-                                } else {
-                                    $('#chkjul').prop('checked', false)
-                                }
-                                if (data.r8 === 'p') {
-                                    $('#chkago').prop('checked', true)
-                                }else {
-                                    $('#chkago').prop('checked', false)
-                                }
-                                if (data.r9 === 'p') {
-                                    $('#chksep').prop('checked', true)
-                                }else {
-                                    $('#chksep').prop('checked', false)
-                                }
-                                if (data.r10 === 'p') {
-                                    $('#chkoct').prop('checked', true)
-                                }else {
-                                    $('#chkoct').prop('checked', false)
-                                }
-                                if (data.r11 === 'p') {
-                                    $('#chknov').prop('checked', true)
-                                }else {
-                                    $('#chknov').prop('checked', false)
-                                }
-                                if (data.r12 === 'p') {
-                                    $('#chkdic').prop('checked', true)
-                                }else {
-                                    $('#chkdic').prop('checked', false)
-                                }
+                                
+                                colocarCheck(data.r1, $('#chkreunion-1'))
+                                colocarCheck(data.r2, $('#chkreunion-2'))
+                                colocarCheck(data.r3, $('#chkreunion-3'))
+                                colocarCheck(data.r4, $('#chkreunion-4'))
+                                colocarCheck(data.r5, $('#chkreunion-5'))
+                                colocarCheck(data.r6, $('#chkreunion-6'))
+                                colocarCheck(data.r7, $('#chkreunion-7'))
+                                colocarCheck(data.r8, $('#chkreunion-8'))
+                                colocarCheck(data.r9, $('#chkreunion-9'))
+                                colocarCheck(data.r10, $('#chkreunion-10'))
+                                colocarCheck(data.r11, $('#chkreunion-11'))
+                                colocarCheck(data.r12, $('#chkreunion-12'))
 
-                                if (data.rm1 === 'p') {
-                                    $('#chkrv-1').prop('checked', true)
-                                }else {
-                                    $('#chkrv-1').prop('checked', false)
-                                }
-                                if (data.rm2 === 'p') {
-                                    $('#chkrv-2').prop('checked', true)
-                                }else {
-                                    $('#chkrv-2').prop('checked', false)
-                                }
-                                if (data.rm3 === 'p') {
-                                    $('#chkrv-3').prop('checked', true)
-                                }else {
-                                    $('#chkrv-3').prop('checked', false)
-                                }
+                                colocarCheck(data.rm1, $('#chkrv-1'))
+                                colocarCheck(data.rm2, $('#chkrv-2'))
+                                colocarCheck(data.rm3, $('#chkrv-3'))
 
-                                if (data.k1 === 'p') {
-                                    $('#chkkm-1').prop('checked', true)
-                                }else {
-                                    $('#chkkm-1').prop('checked', false)
-                                }
-                                if (data.k2 === 'p') {
-                                    $('#chkkm-2').prop('checked', true)
-                                }else {
-                                    $('#chkkm-2').prop('checked', false)
-                                }
-                                if (data.k3 === 'p') {
-                                    $('#chkkm-3').prop('checked', true)
-                                }else {
-                                    $('#chkkm-3').prop('checked', false)
-                                }
+                                colocarCheck(data.k1, $('#chkkm-1'))
+                                colocarCheck(data.k2, $('#chkkm-2'))
+                                colocarCheck(data.k3, $('#chkkm-3'))
                             },
                         })
-                        console.log('5: Buscando aportes')
-                        $.ajax({
-                            data: 'cod=' + datos[0].idbeneficiario,
-                            url: 'procesos/obtenerDatosAporte.php',
-                            type: 'post',
-                            success: (res) => {
-                                aportes = jQuery.parseJSON(res)
-                                console.log('6: Acabe de buscar aportes')
-                            },
-                        })
+
                     } else {
                         alertify.set('notifier','position', 'top-right');
                         alertify.error('El codigo ingresado, no existe')
@@ -169,5 +210,29 @@ $(document).ready(() => {
     })
 
     
-    //
+    //Funciones para optimizar el codigo
+    function colocarCheck (valor, idcheck) {
+        if (valor === 'p') {
+            $(idcheck).prop('checked', true)
+            //$(idcheck).prop('disabled', true)
+        } else {
+            $(idcheck).prop('checked', false)
+            //$(idcheck).prop('disabled', false)
+        }
+    }
+
+    function cambiarCheck (ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, ck9, ck10, ck11, ck12, estado) {
+        ck1.prop('checked', estado)
+        ck2.prop('checked', estado)
+        ck3.prop('checked', estado)
+        ck4.prop('checked', estado)
+        ck5.prop('checked', estado)
+        ck6.prop('checked', estado)
+        ck7.prop('checked', estado)
+        ck8.prop('checked', estado)
+        ck9.prop('checked', estado)
+        ck10.prop('checked', estado)
+        ck11.prop('checked', estado)
+        ck12.prop('checked', estado)
+    }
 })
