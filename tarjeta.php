@@ -23,7 +23,6 @@
             <ul>
                 <li><a href="tarjeta.php" class="active">Mi tarjeta</a></li>
                 <li><a href="asistencia.php">Asistencia</a></li>
-                <li><a href="#">Administrar</a></li>
                 <div class="dropdown">
                     <button class="dropbtn"><?php echo $_SESSION["userfund"] ?></button>
                     <div class="dropdown-content">
@@ -118,19 +117,19 @@
                         <label for="chkapo1-11">N</label>
                         <label for="chkapo1-12">D</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="chkapo1-1" id="chkapo1-1"/>
-                        <input type="checkbox" name="chkapo1-2" id="chkapo1-2"/>
-                        <input type="checkbox" name="chkapo1-3" id="chkapo1-3"/>
-                        <input type="checkbox" name="chkapo1-4" id="chkapo1-4"/>
-                        <input type="checkbox" name="chkapo1-5" id="chkapo1-5"/>
-                        <input type="checkbox" name="chkapo1-6" id="chkapo1-6"/>
-                        <input type="checkbox" name="chkapo1-7" id="chkapo1-7"/>
-                        <input type="checkbox" name="chkapo1-8" id="chkapo1-8"/>
-                        <input type="checkbox" name="chkapo1-9" id="chkapo1-9"/>
-                        <input type="checkbox" name="chkapo1-10" id="chkapo1-10"/>
-                        <input type="checkbox" name="chkapo1-11" id="chkapo1-11"/>
-                        <input type="checkbox" name="chkapo1-12" id="chkapo1-12"/>
+                    <div id="fila-apo1">
+                        <input value="ene" type="checkbox" name="chkapo1-1" id="chkapo1-1"/>
+                        <input value="feb" type="checkbox" name="chkapo1-2" id="chkapo1-2"/>
+                        <input value="mar" type="checkbox" name="chkapo1-3" id="chkapo1-3"/>
+                        <input value="abr" type="checkbox" name="chkapo1-4" id="chkapo1-4"/>
+                        <input value="may" type="checkbox" name="chkapo1-5" id="chkapo1-5"/>
+                        <input value="jun" type="checkbox" name="chkapo1-6" id="chkapo1-6"/>
+                        <input value="jul" type="checkbox" name="chkapo1-7" id="chkapo1-7"/>
+                        <input value="ago" type="checkbox" name="chkapo1-8" id="chkapo1-8"/>
+                        <input value="sep" type="checkbox" name="chkapo1-9" id="chkapo1-9"/>
+                        <input value="oct" type="checkbox" name="chkapo1-10" id="chkapo1-10"/>
+                        <input value="nov" type="checkbox" name="chkapo1-11" id="chkapo1-11"/>
+                        <input value="dic" type="checkbox" name="chkapo1-12" id="chkapo1-12"/>
                     </div>
                 </div>
                 <div class="fila-titulo">
@@ -152,19 +151,19 @@
                         <label for="chkapo2-11">N</label>
                         <label for="chkapo2-12">D</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="chkapo2-1" id="chkapo2-1"/>
-                        <input type="checkbox" name="chkapo2-2" id="chkapo2-2"/>
-                        <input type="checkbox" name="chkapo2-3" id="chkapo2-3"/>
-                        <input type="checkbox" name="chkapo2-4" id="chkapo2-4"/>
-                        <input type="checkbox" name="chkapo2-5" id="chkapo2-5"/>
-                        <input type="checkbox" name="chkapo2-6" id="chkapo2-6"/>
-                        <input type="checkbox" name="chkapo2-7" id="chkapo2-7"/>
-                        <input type="checkbox" name="chkapo2-8" id="chkapo2-8"/>
-                        <input type="checkbox" name="chkapo2-9" id="chkapo2-9"/>
-                        <input type="checkbox" name="chkapo2-10" id="chkapo2-10"/>
-                        <input type="checkbox" name="chkapo2-11" id="chkapo2-11"/>
-                        <input type="checkbox" name="chkapo2-12" id="chkapo2-12"/>
+                    <div id="fila-apo2">
+                        <input value="ene" type="checkbox" name="chkapo2-1" id="chkapo2-1"/>
+                        <input value="feb" type="checkbox" name="chkapo2-2" id="chkapo2-2"/>
+                        <input value="mar" type="checkbox" name="chkapo2-3" id="chkapo2-3"/>
+                        <input value="abr" type="checkbox" name="chkapo2-4" id="chkapo2-4"/>
+                        <input value="may" type="checkbox" name="chkapo2-5" id="chkapo2-5"/>
+                        <input value="jun" type="checkbox" name="chkapo2-6" id="chkapo2-6"/>
+                        <input value="jul" type="checkbox" name="chkapo2-7" id="chkapo2-7"/>
+                        <input value="ago" type="checkbox" name="chkapo2-8" id="chkapo2-8"/>
+                        <input value="sep" type="checkbox" name="chkapo2-9" id="chkapo2-9"/>
+                        <input value="oct" type="checkbox" name="chkapo2-10" id="chkapo2-10"/>
+                        <input value="nov" type="checkbox" name="chkapo2-11" id="chkapo2-11"/>
+                        <input value="dic" type="checkbox" name="chkapo2-12" id="chkapo2-12"/>
                     </div>
                 </div>
                 <div class="fila-titulo">
@@ -186,19 +185,19 @@
                         <label for="chkapo3-11">N</label>
                         <label for="chkapo3-12">D</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="chkapo3-1" id="chkapo3-1"/>
-                        <input type="checkbox" name="chkapo3-2" id="chkapo3-2"/>
-                        <input type="checkbox" name="chkapo3-3" id="chkapo3-3"/>
-                        <input type="checkbox" name="chkapo3-4" id="chkapo3-4"/>
-                        <input type="checkbox" name="chkapo3-5" id="chkapo3-5"/>
-                        <input type="checkbox" name="chkapo3-6" id="chkapo3-6"/>
-                        <input type="checkbox" name="chkapo3-7" id="chkapo3-7"/>
-                        <input type="checkbox" name="chkapo3-8" id="chkapo3-8"/>
-                        <input type="checkbox" name="chkapo3-9" id="chkapo3-9"/>
-                        <input type="checkbox" name="chkapo3-10" id="chkapo3-10"/>
-                        <input type="checkbox" name="chkapo3-11" id="chkapo3-11"/>
-                        <input type="checkbox" name="chkapo3-12" id="chkapo3-12"/>
+                    <div id="fila-apo3">
+                        <input value="ene" type="checkbox" name="chkapo3-1" id="chkapo3-1"/>
+                        <input value="feb" type="checkbox" name="chkapo3-2" id="chkapo3-2"/>
+                        <input value="mar" type="checkbox" name="chkapo3-3" id="chkapo3-3"/>
+                        <input value="abr" type="checkbox" name="chkapo3-4" id="chkapo3-4"/>
+                        <input value="may" type="checkbox" name="chkapo3-5" id="chkapo3-5"/>
+                        <input value="jun" type="checkbox" name="chkapo3-6" id="chkapo3-6"/>
+                        <input value="jul" type="checkbox" name="chkapo3-7" id="chkapo3-7"/>
+                        <input value="ago" type="checkbox" name="chkapo3-8" id="chkapo3-8"/>
+                        <input value="sep" type="checkbox" name="chkapo3-9" id="chkapo3-9"/>
+                        <input value="oct" type="checkbox" name="chkapo3-10" id="chkapo3-10"/>
+                        <input value="nov" type="checkbox" name="chkapo3-11" id="chkapo3-11"/>
+                        <input value="dic" type="checkbox" name="chkapo3-12" id="chkapo3-12"/>
                     </div>
                 </div>
                 <h5>Otros</h5>

@@ -42,6 +42,9 @@ $(document).ready(() => {
                             })
                             cambiarCheck($('#chkapo2-1'), $('#chkapo2-2'), $('#chkapo2-3'), $('#chkapo2-4'), $('#chkapo2-5'), $('#chkapo2-6'), $('#chkapo2-7'), $('#chkapo2-8'), $('#chkapo2-9'), $('#chkapo2-10'), $('#chkapo2-11'), $('#chkapo2-12'), false)
                             cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
+                            $('#fila-apo1 input[type="checkbox"]').prop('disabled', false)
+                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', true)
+                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', true)
                         }
                         if (datos.length === 2) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -93,6 +96,8 @@ $(document).ready(() => {
                             })
 
                             cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
+                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', false)
+                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', true)
                         }
                         if (datos.length === 3) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -163,6 +168,9 @@ $(document).ready(() => {
                                     colocarCheck(aportes3.dic, $('#chkapo3-12'))
                                 },
                             })
+
+                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', false)
+                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', false)
                         }
 
                         $.ajax({
@@ -195,10 +203,12 @@ $(document).ready(() => {
                             },
                         })
 
+
                     } else {
                         alertify.set('notifier','position', 'top-right');
                         alertify.error('El codigo ingresado, no existe')
                         $('#txtcodigo').focus()
+                        $('input[type="checkbox"]').prop('disabled', true)
                     }
                 },
             })
@@ -206,9 +216,36 @@ $(document).ready(() => {
             alertify.set('notifier','position', 'top-right');
             alertify.error('Ingrese un codigo para buscar')
             $('#txtcodigo').focus()
+            $('input[type="checkbox"]').prop('disabled', true)
         }
     })
 
+
+    $('#chkapo1-1').click(() => {actualizarAporteEnBD($('#chkapo1-1'), aportes1)})
+    $('#chkapo1-2').click(() => {actualizarAporteEnBD($('#chkapo1-2'), aportes1)})
+    $('#chkapo1-3').click(() => {actualizarAporteEnBD($('#chkapo1-3'), aportes1)})
+    $('#chkapo1-4').click(() => {actualizarAporteEnBD($('#chkapo1-4'), aportes1)})
+    $('#chkapo1-5').click(() => {actualizarAporteEnBD($('#chkapo1-5'), aportes1)})
+    $('#chkapo1-6').click(() => {actualizarAporteEnBD($('#chkapo1-6'), aportes1)})
+    $('#chkapo1-7').click(() => {actualizarAporteEnBD($('#chkapo1-7'), aportes1)})
+    $('#chkapo1-8').click(() => {actualizarAporteEnBD($('#chkapo1-8'), aportes1)})
+    $('#chkapo1-9').click(() => {actualizarAporteEnBD($('#chkapo1-9'), aportes1)})
+    $('#chkapo1-10').click(() => {actualizarAporteEnBD($('#chkapo1-10'), aportes1)})
+    $('#chkapo1-11').click(() => {actualizarAporteEnBD($('#chkapo1-11'), aportes1)})
+    $('#chkapo1-12').click(() => {actualizarAporteEnBD($('#chkapo1-12'), aportes1)})
+
+    $('#chkapo2-1').click(() => {actualizarAporteEnBD($('#chkapo2-1'), aportes2)})
+    $('#chkapo2-2').click(() => {actualizarAporteEnBD($('#chkapo2-2'), aportes2)})
+    $('#chkapo2-3').click(() => {actualizarAporteEnBD($('#chkapo2-3'), aportes2)})
+    $('#chkapo2-4').click(() => {actualizarAporteEnBD($('#chkapo2-4'), aportes2)})
+    $('#chkapo2-5').click(() => {actualizarAporteEnBD($('#chkapo2-5'), aportes2)})
+    $('#chkapo2-6').click(() => {actualizarAporteEnBD($('#chkapo2-6'), aportes2)})
+    $('#chkapo2-7').click(() => {actualizarAporteEnBD($('#chkapo2-7'), aportes2)})
+    $('#chkapo2-8').click(() => {actualizarAporteEnBD($('#chkapo2-8'), aportes2)})
+    $('#chkapo2-9').click(() => {actualizarAporteEnBD($('#chkapo2-9'), aportes2)})
+    $('#chkapo2-10').click(() => {actualizarAporteEnBD($('#chkapo2-10'), aportes2)})
+    $('#chkapo2-11').click(() => {actualizarAporteEnBD($('#chkapo2-11'), aportes2)})
+    $('#chkapo2-12').click(() => {actualizarAporteEnBD($('#chkapo2-12'), aportes2)})
     
     //Funciones para optimizar el codigo
     function colocarCheck (valor, idcheck) {
@@ -218,6 +255,38 @@ $(document).ready(() => {
         } else {
             $(idcheck).prop('checked', false)
             //$(idcheck).prop('disabled', false)
+        }
+    }
+
+    function actualizarAporteEnBD (chk, idapo) {
+        alertify.set('notifier','position', 'top-right');
+        alertify.set('notifier','delay', 10);
+        if($(chk).prop('checked')) {
+            $.ajax({
+                data: 'idaporte=' + idapo.idaporte + '&valor=p&mes=' + $(chk).val(),
+                url: 'procesos/registrar-apo.php',
+                type: 'post',
+                success: (res) => {
+                    if(res !== 'falta') {
+                        alertify.success(res)
+                    } else {
+                        alertify.error('Faltan datos de beneficiario')
+                    }
+                },
+            })
+        } else {
+            $.ajax({
+                data: 'idaporte=' + idapo.idaporte + '&valor=f&mes=' + $(chk).val(),
+                url: 'procesos/registrar-apo.php',
+                type: 'post',
+                success: (res) => {
+                    if(res !== 'falta') {
+                        alertify.success(res)
+                    } else {
+                        alertify.error('Faltan datos de beneficiario')
+                    }
+                },
+            })
         }
     }
 
@@ -234,5 +303,9 @@ $(document).ready(() => {
         ck10.prop('checked', estado)
         ck11.prop('checked', estado)
         ck12.prop('checked', estado)
+
     }
+
+
+    $('input[type="checkbox"]').prop('disabled', true) //Luego de cargar pagina, inhabilita los checkbox
 })

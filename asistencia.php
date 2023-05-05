@@ -23,7 +23,6 @@
             <ul>
                 <li><a href="tarjeta.php">Mi tarjeta</a></li>
                 <li><a href="asistencia.php" class="active">Asistencia</a></li>
-                <li><a href="#">Administrar</a></li>
                 <div class="dropdown">
                     <button class="dropbtn"><?php echo $_SESSION["userfund"] ?></button>
                     <div class="dropdown-content">
