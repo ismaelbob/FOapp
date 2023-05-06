@@ -1,0 +1,50 @@
+.contenedor-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+.formulario-1 {
+    background-color: aliceblue;
+    padding: 1em;
+    width: 500px;
+}
+.formulario-1 h5 {
+    padding: 0;
+    margin: 0em 0em 1.5em 0em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+.formulario-1 input[type="number"], .formulario-1 select{
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+.formulario-1 input[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background-color: #27b0a2;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.formulario-1 input[type="submit"]:hover {
+    background-color: #248f84;
+}
+.formulario-1 input[type="number"] {
+    width: 90%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+.formulario-1 .btn-buscar {
+    background-color: orange;
+    padding: .55em;
+    width: 9%;
+    margin: 0;
+    cursor: pointer;
+    border: 1px gray solid;
+}
+.formulario-1 .btn-buscar:hover {
+    background-color: rgb(221, 144, 0);
+}

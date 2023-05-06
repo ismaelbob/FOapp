@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Tarjeta | FO</title>
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/secciones.css">
+    <link rel="stylesheet" href="css/asistencia.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/themes/default.css">
     <script src="librerias/jquery-3.4.1.min.js"></script>
@@ -33,16 +33,26 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <div>
+    <div class="contenedor-main">
+        <div class="formulario-1">
             <h5>Registrar asistencia</h5>
             <form id="form-reg-reunion" method="post">
-                <input type="number" name="txtcodigo" id="txtcodigo"/>
                 <select name="cmbmes" id="cmbmes">
-                    <option value="ene">Enero</option>
-                    <option value="feb">Febrero</option>
-                    <option value="mar">Marzo</option>
+                    <option value="r1">Enero</option>
+                    <option value="r2">Febrero</option>
+                    <option value="r3">Marzo</option>
+                    <option value="r4">Abril</option>
+                    <option value="r5">Mayo</option>
+                    <option value="r6">Junio</option>
+                    <option value="r7">Julio</option>
+                    <option value="r8">Agosto</option>
+                    <option value="r9">Septiembre</option>
+                    <option value="r10">Octubre</option>
+                    <option value="r11">Noviembre</option>
+                    <option value="r12">Diciembre</option>
                 </select>
+                <input type="number" name="txtcodigo" id="txtcodigo"/>
+                <button class="btn-buscar">...</button>
                 <input type="submit" value="Registrar"/>
             </form>
         </div>
