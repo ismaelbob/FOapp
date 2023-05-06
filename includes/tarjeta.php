@@ -11,5 +11,8 @@
             }
             $con = null;
         }
+        function registrarParticipacion($idparticipacion, $mes, $valor) {
+            $this -> conectar() -> query("UPDATE tarjeta SET $mes='$valor' WHERE idtarjeta=$idparticipacion;");          
+        }
     }
 ?>

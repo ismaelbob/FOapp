@@ -42,9 +42,9 @@ $(document).ready(() => {
                             })
                             cambiarCheck($('#chkapo2-1'), $('#chkapo2-2'), $('#chkapo2-3'), $('#chkapo2-4'), $('#chkapo2-5'), $('#chkapo2-6'), $('#chkapo2-7'), $('#chkapo2-8'), $('#chkapo2-9'), $('#chkapo2-10'), $('#chkapo2-11'), $('#chkapo2-12'), false)
                             cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
-                            $('#fila-apo1 input[type="checkbox"]').prop('disabled', false)
-                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', true)
-                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', true)
+                            $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo2 input[type="checkbox"]').prop('disabled', true)
+                            $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
                         }
                         if (datos.length === 2) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -96,8 +96,9 @@ $(document).ready(() => {
                             })
 
                             cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
-                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', false)
-                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', true)
+                            $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo2 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
                         }
                         if (datos.length === 3) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -169,8 +170,9 @@ $(document).ready(() => {
                                 },
                             })
 
-                            $('#fila-apo2 input[type="checkbox"]').prop('disabled', false)
-                            $('#fila-apo3 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo2 input[type="checkbox"]').prop('disabled', false)
+                            $('.fila-apo3 input[type="checkbox"]').prop('disabled', false)
                         }
 
                         $.ajax({
@@ -203,7 +205,7 @@ $(document).ready(() => {
                             },
                         })
 
-
+                        $('.fila-participaciones input[type="checkbox"]').prop('disabled', false)
                     } else {
                         alertify.set('notifier','position', 'top-right');
                         alertify.error('El codigo ingresado, no existe')
@@ -246,15 +248,33 @@ $(document).ready(() => {
     $('#chkapo2-10').click(() => {actualizarAporteEnBD($('#chkapo2-10'), aportes2)})
     $('#chkapo2-11').click(() => {actualizarAporteEnBD($('#chkapo2-11'), aportes2)})
     $('#chkapo2-12').click(() => {actualizarAporteEnBD($('#chkapo2-12'), aportes2)})
+
+    $('#chkreunion-1').click(() => {actualizarParticipacionEnBD($('#chkreunion-1'), data)})
+    $('#chkreunion-2').click(() => {actualizarParticipacionEnBD($('#chkreunion-2'), data)})
+    $('#chkreunion-3').click(() => {actualizarParticipacionEnBD($('#chkreunion-3'), data)})
+    $('#chkreunion-4').click(() => {actualizarParticipacionEnBD($('#chkreunion-4'), data)})
+    $('#chkreunion-5').click(() => {actualizarParticipacionEnBD($('#chkreunion-5'), data)})
+    $('#chkreunion-6').click(() => {actualizarParticipacionEnBD($('#chkreunion-6'), data)})
+    $('#chkreunion-7').click(() => {actualizarParticipacionEnBD($('#chkreunion-7'), data)})
+    $('#chkreunion-8').click(() => {actualizarParticipacionEnBD($('#chkreunion-8'), data)})
+    $('#chkreunion-9').click(() => {actualizarParticipacionEnBD($('#chkreunion-9'), data)})
+    $('#chkreunion-10').click(() => {actualizarParticipacionEnBD($('#chkreunion-10'), data)})
+    $('#chkreunion-11').click(() => {actualizarParticipacionEnBD($('#chkreunion-11'), data)})
+    $('#chkreunion-12').click(() => {actualizarParticipacionEnBD($('#chkreunion-12'), data)})
+
+    $('#chkrv-1').click(() => {actualizarParticipacionEnBD($('#chkrv-1'), data)})
+    $('#chkrv-2').click(() => {actualizarParticipacionEnBD($('#chkrv-2'), data)})
+    $('#chkrv-3').click(() => {actualizarParticipacionEnBD($('#chkrv-3'), data)})
+    $('#chkkm-1').click(() => {actualizarParticipacionEnBD($('#chkkm-1'), data)})
+    $('#chkkm-2').click(() => {actualizarParticipacionEnBD($('#chkkm-2'), data)})
+    $('#chkkm-3').click(() => {actualizarParticipacionEnBD($('#chkkm-3'), data)})
     
     //Funciones para optimizar el codigo
     function colocarCheck (valor, idcheck) {
         if (valor === 'p') {
             $(idcheck).prop('checked', true)
-            //$(idcheck).prop('disabled', true)
         } else {
             $(idcheck).prop('checked', false)
-            //$(idcheck).prop('disabled', false)
         }
     }
 
@@ -278,6 +298,37 @@ $(document).ready(() => {
             $.ajax({
                 data: 'idaporte=' + idapo.idaporte + '&valor=f&mes=' + $(chk).val(),
                 url: 'procesos/registrar-apo.php',
+                type: 'post',
+                success: (res) => {
+                    if(res !== 'falta') {
+                        alertify.success(res)
+                    } else {
+                        alertify.error('Faltan datos de beneficiario')
+                    }
+                },
+            })
+        }
+    }
+    function actualizarParticipacionEnBD (chk, idparticipacion) {
+        alertify.set('notifier','position', 'top-right');
+        alertify.set('notifier','delay', 10);
+        if($(chk).prop('checked')) {
+            $.ajax({
+                data: 'idparticipacion=' + idparticipacion.idtarjeta + '&valor=p&mes=' + $(chk).val(),
+                url: 'procesos/registrar-reunion.php',
+                type: 'post',
+                success: (res) => {
+                    if(res !== 'falta') {
+                        alertify.success(res)
+                    } else {
+                        alertify.error('Faltan datos de beneficiario')
+                    }
+                },
+            })
+        } else {
+            $.ajax({
+                data: 'idparticipacion=' + idparticipacion.idtarjeta + '&valor=f&mes=' + $(chk).val(),
+                url: 'procesos/registrar-reunion.php',
                 type: 'post',
                 success: (res) => {
                     if(res !== 'falta') {
