@@ -6,7 +6,7 @@
 .formulario-1 {
     background-color: aliceblue;
     padding: 1em;
-    width: 500px;
+    width: 95%;
 }
 .formulario-1 h5 {
     padding: 0;
@@ -33,7 +33,7 @@
     background-color: #248f84;
 }
 .formulario-1 input[type="number"] {
-    width: 90%;
+    width: 89.8%;
     padding: .5em;
     margin-bottom: 1em;
 }
@@ -47,4 +47,25 @@
 }
 .formulario-1 .btn-buscar:hover {
     background-color: rgb(221, 144, 0);
+}
+
+@media only screen and (min-width: 768px) {
+    .formulario-1 {
+        background-color: aliceblue;
+        padding: 1em;
+        width: 500px;
+    }
+    .formulario-1 input[type="number"] {
+        width: 90%;
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+    .formulario-1 .btn-buscar {
+        background-color: orange;
+        padding: .55em;
+        width: 9%;
+        margin: 0;
+        cursor: pointer;
+        border: 1px gray solid;
+    }
 }

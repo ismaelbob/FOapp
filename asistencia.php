@@ -12,6 +12,7 @@
     <title>Mi Tarjeta | FO</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/asistencia.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/themes/default.css">
     <script src="librerias/jquery-3.4.1.min.js"></script>
@@ -34,7 +35,7 @@
         </nav>
     </header>
     <div class="contenedor-main">
-        <div class="formulario-1">
+        <div class="formulario-1" id="form-reunion">
             <h5>Registrar asistencia</h5>
             <form id="form-reg-reunion" method="post">
                 <select name="cmbmes" id="cmbmes">
@@ -52,9 +53,20 @@
                     <option value="r12">Diciembre</option>
                 </select>
                 <input type="number" name="txtcodigo" id="txtcodigo"/>
-                <button class="btn-buscar">...</button>
-                <input type="submit" value="Registrar"/>
+                <button class="btn-buscar" id="btn-buscar">...</button>
+                <input id="btn-registrar" type="submit" value="Registrar"/>
             </form>
+        </div>
+    </div>
+    <div class="overlay" id="overlay-popup">
+        <div class="popup" id="popup-buscar">
+            <button class="btn-cerrar-popup" id="btn-cerrar-popup">x</button>
+            <div>
+                <div class="encabezado">
+                    <input type="text"/>
+                </div>
+                <div id="contenedor-lista"></div>
+            </div>
         </div>
     </div>
 </body>
