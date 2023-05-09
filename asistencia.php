@@ -59,10 +59,11 @@
         </div>
     </div>
     <div class="overlay" id="overlay-popup">
-        <div class="popup" id="popup-buscar">
-            <button class="btn-cerrar-popup" id="btn-cerrar-popup">x</button>
-            <div>
-                <div class="encabezado">
+        <div class="popup-2 " id="popup-buscar">
+            <div class="btn-cerrar-popup" id="btn-cerrar-popup">&times;</div>
+            <div class="formulario-2">
+                <h5>Buscar</h5>
+                <div>
                     <input type="text"/>
                 </div>
                 <div id="contenedor-lista"></div>

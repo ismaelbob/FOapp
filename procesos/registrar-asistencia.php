@@ -10,10 +10,15 @@
         $valor = "p";
 
         $idhogar = $Beneficiario -> obtenerIdHogar($codigo);
+        if ($idhogar <> "error") {
+            $tarjeta -> registrarParticipacion($idhogar, $mes, $valor);
+            echo "Se registro asistencia";
+        } else {
+            echo "Codigo no registrado";
+        }
 
-        $tarjeta -> registrarParticipacion($idhogar, $mes, $valor);
+        
 
-        echo "Se registro asistencia";
 
     } else {
         echo "falta";

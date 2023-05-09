@@ -17,13 +17,19 @@ $(document).ready(() => {
         $('#popup-buscar').removeClass('activo')
         $('#overlay-popup').removeClass('activo')
     })
+    $('#overlay-popup').click(() => {
+        $('#popup-buscar').removeClass('activo')
+        $('#overlay-popup').removeClass('activo')
+    })
 
     $.ajax({
         data: '',
         url: 'procesos/obtener-listaben-seleccionar.php',
         type: 'post',
         success: (res) => {
-            $('#contenedor-lista').load(res)
+            //$('#contenedor-lista').load(res)
+            //console.log(res)
+            $('#contenedor-lista').html(res)
         }
     })
 })
@@ -39,11 +45,19 @@ function registrarAsistencia() {
             url: 'procesos/registrar-asistencia.php',
             type: 'post',
             success: (respuesta) => {
-                alertify.success(respuesta)
+                respuesta === 'Se registro asistencia'
+                    ? alertify.success(respuesta)
+                    : alertify.error(respuesta)
             },
         })
     } else {
         alertify.error('Ingrese codigo para buscar')
         codigo.focus()
     }
+}
+
+function seleccionarItem(item) {
+    codigo.val(item)
+    $('#popup-buscar').removeClass('activo')
+    $('#overlay-popup').removeClass('activo')
 }
