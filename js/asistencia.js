@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    //$('#cmbmes').val('Mayo')
+    seleccionarMesEnCurso()
 
     $('#btn-registrar').click((event) => {
         event.preventDefault()
@@ -17,10 +17,10 @@ $(document).ready(() => {
         $('#popup-buscar').removeClass('activo')
         $('#overlay-popup').removeClass('activo')
     })
-    // $('#overlay-popup').click(() => {
-    //     $('#popup-buscar').removeClass('activo')
-    //     $('#overlay-popup').removeClass('activo')
-    // })
+    /*$('#overlay-popup').click(() => {
+        $('#popup-buscar').removeClass('activo')
+        $('#overlay-popup').removeClass('activo')
+    })*/
     $('#txtcodigo').on('keyup', () => {
         if ($('#txtcodigo').val() !== '') {
             $.ajax({
@@ -87,4 +87,13 @@ function seleccionarItem(item, nombres) {
     $('#lblnombres').html(nombres)
     $('#popup-buscar').removeClass('activo')
     $('#overlay-popup').removeClass('activo')
+}
+
+function seleccionarMesEnCurso() {
+    const fecha = new Date()
+    const mes = fecha.getMonth() + 1
+    
+    const valor = 'r' + mes
+    $('#cmbmes').val(valor)
+    console.log(valor)
 }

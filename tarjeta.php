@@ -216,14 +216,6 @@
                     </div>
                 </div>
             </div>
-            <div class="pnl_menu">
-                <h4>Acciones</h4>
-                <button>Aporte</button>
-                <button>Multa</button>
-            </div>
-            <div class="pnl_lista">
-                <h4></h4>
-            </div>
         </div>
     </div>
     <div class="overlay" id="overlay-popup">
