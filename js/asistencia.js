@@ -17,9 +17,37 @@ $(document).ready(() => {
         $('#popup-buscar').removeClass('activo')
         $('#overlay-popup').removeClass('activo')
     })
-    $('#overlay-popup').click(() => {
-        $('#popup-buscar').removeClass('activo')
-        $('#overlay-popup').removeClass('activo')
+    // $('#overlay-popup').click(() => {
+    //     $('#popup-buscar').removeClass('activo')
+    //     $('#overlay-popup').removeClass('activo')
+    // })
+    $('#txtcodigo').on('keyup', () => {
+        if ($('#txtcodigo').val() !== '') {
+            $.ajax({
+                data: 'txtcodigo=' + $('#txtcodigo').val(),
+                url: 'procesos/obtenerDatosBen.php',
+                type: 'post',
+                success: (respuesta) => {
+                    beneficiario = jQuery.parseJSON(respuesta)
+                    console.log(beneficiario)
+                    if(beneficiario !== false) {
+                        $('#lblnombres').html(`${beneficiario.nombres} ${beneficiario.paterno} ${beneficiario.materno}`)
+                    } else {
+                        $('#lblnombres').html(' -codigo no registrado-')
+                    }
+                }
+            })
+        }
+    })
+    $('#txtbusqueda').on('keyup', () => {
+        $.ajax({
+            data: 'buscar=' + $('#txtbusqueda').val(),
+            url: 'procesos/buscar-ben-tabla.php',
+            type: 'post',
+            success: (respuesta) => {
+                $('#contenedor-lista').html(respuesta)
+            },
+        })
     })
 
     $.ajax({
@@ -27,8 +55,6 @@ $(document).ready(() => {
         url: 'procesos/obtener-listaben-seleccionar.php',
         type: 'post',
         success: (res) => {
-            //$('#contenedor-lista').load(res)
-            //console.log(res)
             $('#contenedor-lista').html(res)
         }
     })
@@ -56,8 +82,9 @@ function registrarAsistencia() {
     }
 }
 
-function seleccionarItem(item) {
+function seleccionarItem(item, nombres) {
     codigo.val(item)
+    $('#lblnombres').html(nombres)
     $('#popup-buscar').removeClass('activo')
     $('#overlay-popup').removeClass('activo')
 }

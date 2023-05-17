@@ -5,6 +5,7 @@
     $resultado = $beneficiario -> todoBeneficiario();
 
     foreach ($resultado as $fila) {
-        echo "<div onclick=seleccionarItem(" . intval($fila["idbeneficiario"]) .") class='item'><div class='item-cod'>" . $fila["idbeneficiario"] . " " . "</div><div>" . $fila["nombres"] . " " . $fila["paterno"] . " " . $fila["materno"] . "</div></div>";
+        $nombres = $fila["nombres"] . " " . $fila["paterno"] . " " . $fila["materno"];
+        echo "<div onclick='seleccionarItem(" . intval($fila["idbeneficiario"]) . ",\"" . $nombres . "\")' class='item'><div class='item-cod'>" . $fila["idbeneficiario"] . " " . "</div><div>" . $nombres . "</div></div>";
     }
 ?>

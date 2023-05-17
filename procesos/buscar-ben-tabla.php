@@ -7,7 +7,8 @@
         $resultado = $beneficiario -> buscarBeneficiario($buscar);
 
         foreach ($resultado as $fila) {
-            echo $fila["idbeneficiario"] . $fila["nombres"] . ' | ';
+            $nombres = $fila["nombres"] . " " . $fila["paterno"] . " " . $fila["materno"];
+            echo "<div onclick='seleccionarItem(" . intval($fila["idbeneficiario"]) . ",\"" . $nombres . "\")' class='item'><div class='item-cod'>" . $fila["idbeneficiario"] . " " . "</div><div>" . $nombres . "</div></div>";
         }
     } else {
         echo 'error';

@@ -359,4 +359,38 @@ $(document).ready(() => {
 
 
     $('input[type="checkbox"]').prop('disabled', true) //Luego de cargar pagina, inhabilita los checkbox
+
+    $.ajax({
+        data: '',
+        url: 'procesos/obtener-listaben-seleccionar.php',
+        type: 'post',
+        success: (res) => {
+            $('#contenedor-lista').html(res)
+        }
+    })
+    $('#btn-buscar').click(() => {
+        $('#popup-buscar').addClass('activo')
+        $('#overlay-popup').addClass('activo')
+    })
+    $('#btn-cerrar-popup').click(() => {
+        $('#popup-buscar').removeClass('activo')
+        $('#overlay-popup').removeClass('activo')
+    })
+    $('#txtbusqueda').on('keyup', () => {
+        $.ajax({
+            data: 'buscar=' + $('#txtbusqueda').val(),
+            url: 'procesos/buscar-ben-tabla.php',
+            type: 'post',
+            success: (respuesta) => {
+                $('#contenedor-lista').html(respuesta)
+            },
+        })
+    })
+    
 })
+
+function seleccionarItem(item, nombres) {
+    $('#txtcodigo').val(item)
+    $('#popup-buscar').removeClass('activo')
+    $('#overlay-popup').removeClass('activo')
+}

@@ -38,6 +38,7 @@
         <div class="formulario-1" id="form-reunion">
             <h5>Registrar asistencia</h5>
             <form id="form-reg-reunion" method="post">
+                <label for="cmbmes">Mes:</label>
                 <select name="cmbmes" id="cmbmes">
                     <option value="r1">Enero</option>
                     <option value="r2">Febrero</option>
@@ -52,8 +53,10 @@
                     <option value="r11">Noviembre</option>
                     <option value="r12">Diciembre</option>
                 </select>
+                <label for="txtcodigo">Codigo:</label>
                 <input type="number" name="txtcodigo" id="txtcodigo"/>
                 <button class="btn-buscar" id="btn-buscar">...</button>
+                <label>Beneficiario:</label><span id="lblnombres"></span>
                 <input id="btn-registrar" type="submit" value="Registrar"/>
             </form>
         </div>
@@ -64,7 +67,7 @@
             <div class="formulario-2">
                 <h5>Buscar</h5>
                 <div>
-                    <input type="text"/>
+                    <input type="text" id="txtbusqueda" name="txtbusqueda"/>
                 </div>
                 <div id="contenedor-lista"></div>
             </div>

@@ -12,6 +12,8 @@
     <title>Mi Tarjeta | FO</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/secciones.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/asistencia.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="librerias/alertifyjs/css/themes/default.css">
     <script src="librerias/jquery-3.4.1.min.js"></script>
@@ -38,7 +40,7 @@
             <div class="pnl_datos">
                 <h4>Datos</h4>
                 <div>
-                    <div><input type="number" name="txtcodigo" id="txtcodigo"/><button class="btn-popup">...</button></div>
+                    <div><input type="number" name="txtcodigo" id="txtcodigo"/><button id="btn-buscar" class="btn-popup">...</button></div>
                     <input id="btnbuscar" type="button" value="Buscar">
                 </div>
                 <div>
@@ -221,6 +223,18 @@
             </div>
             <div class="pnl_lista">
                 <h4></h4>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay-popup">
+        <div class="popup-2 " id="popup-buscar">
+            <div class="btn-cerrar-popup" id="btn-cerrar-popup">&times;</div>
+            <div class="formulario-2">
+                <h5>Buscar</h5>
+                <div>
+                    <input type="text" id="txtbusqueda" name="txtbusqueda"/>
+                </div>
+                <div id="contenedor-lista"></div>
             </div>
         </div>
     </div>
