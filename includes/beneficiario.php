@@ -74,5 +74,8 @@
             $cantidad = $con -> fetch(PDO::FETCH_OBJ)->cantidad;
             return $cantidad;
         }
+        public function hijosDeHogar($hog) {
+            return $this -> conectar() -> query("SELECT idbeneficiario, nombres, paterno FROM beneficiario WHERE hogar=$hog");
+        }
     }
 ?>
