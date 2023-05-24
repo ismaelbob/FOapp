@@ -25,60 +25,14 @@
                 </div>
             </div>
             <div class="pnl-datos" id="pnl-datos">
-                <h4>DATOS</h4>
                 <div class="msg-error" id="msg-error"></div>
-                <div class="esqueleton-titulo"></div>
-                <div class="esqueleton-largo"></div>
-                <div class="esqueleton-corto"></div>
-                <div class="esqueleton-largo"></div>
+                <div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div>
+                <div class="esqueleton-corto"></div><div class="esqueleton-largo"></div>
                 <div class="esqueleton-corto"></div>
             </div>
             <div class="pnl-tarjeta" id="pnl-tarjeta">
-                <div class="esqueleton-titulo"></div>
-                <div class="esqueleton-largo"></div>
-                <h4>Aportes</h4>
-                <div class="fila">
-                    <span class="cumplido">Enero</span>
-                    <span class="cumplido">Febrero</span>
-                    <span class="cumplido">Marzo</span>
-                    <span>Abril</span>
-                    <span>Mayo</span>
-                    <span>Junio</span>
-                    <span>Julio</span>
-                    <span>Agosto</span>
-                    <span>Septiembre</span>
-                    <span>Octubre</span>
-                    <span>Noviembre</span>
-                    <span>Diciembre</span>
-                </div>
-                <div class="fila">
-                    <span class="cumplido">Enero</span>
-                    <span class="cumplido">Febrero</span>
-                    <span class="cumplido">Marzo</span>
-                    <span>Abril</span>
-                    <span>Mayo</span>
-                    <span>Junio</span>
-                    <span>Julio</span>
-                    <span>Agosto</span>
-                    <span>Septiembre</span>
-                    <span>Octubre</span>
-                    <span>Noviembre</span>
-                    <span>Diciembre</span>
-                </div>
-                <div class="fila">
-                    <span class="cumplido">Enero</span>
-                    <span class="cumplido">Febrero</span>
-                    <span class="cumplido">Marzo</span>
-                    <span>Abril</span>
-                    <span>Mayo</span>
-                    <span>Junio</span>
-                    <span>Julio</span>
-                    <span>Agosto</span>
-                    <span>Septiembre</span>
-                    <span>Octubre</span>
-                    <span>Noviembre</span>
-                    <span>Diciembre</span>
-                </div>
+                <div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div>
+                <div class="esqueleton-corto"></div><div class="esqueleton-largo"></div>
                 <div class="fila">
                     <div class="esqueleton-titulo"></div>
                     <div class="esqueleton-largo"></div>

@@ -93,6 +93,10 @@ body {
 .pnl-tarjeta h4 {
     margin-bottom: .3em;
 }
+.pnl-tarjeta h5 {
+    color:#088395;
+    margin-bottom: .4em;
+}
 .pnl-tarjeta .fila {
     display: flex;
     justify-content: space-between;
@@ -133,7 +137,7 @@ body {
     margin-bottom: .5em;
 }
 .esqueleton-titulo {
-    width: 40%;
+    width: 100px;
     height: 15px;
     background-color: #DDE6ED;
     border-radius: 5px;
