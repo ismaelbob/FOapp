@@ -113,14 +113,8 @@ body {
     margin-bottom: 3px;
 }
 .cumplido {
-    background-color: #088395;
-    color: white;
-}
-.msg-error {
-    color: rgb(192, 25, 25);
-    text-align: center;
-    font-style: italic;
-    font-size: 14px;
+    background-color: #B9EDDD;
+    color: Black;
 }
 .esqueleton-largo {
     width: 100%;

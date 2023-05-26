@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/tarjetappff.css">
+    <link rel="stylesheet" href="../librerias/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="../librerias/alertifyjs/css/themes/default.css">
     <script src="../librerias/jquery-3.4.1.min.js"></script>
     <script src="../librerias/alertifyjs/alertify.js"></script>
     <title>Mi Tarjeta</title>
@@ -25,7 +27,6 @@
                 </div>
             </div>
             <div class="pnl-datos" id="pnl-datos">
-                <div class="msg-error" id="msg-error"></div>
                 <div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div>
                 <div class="esqueleton-corto"></div><div class="esqueleton-largo"></div>
                 <div class="esqueleton-corto"></div>
