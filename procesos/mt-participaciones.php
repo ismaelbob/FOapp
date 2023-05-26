@@ -30,7 +30,9 @@
                     <span '; if($consulta -> r12 === 'p') { echo 'class="cumplido"';} echo '>4 Diciembre</span>
                 </div>';
         echo '<h4>Aportes</h4>';
+        $arrayHijos = array();
         foreach ($hijos as $hijo) {
+            array_push($arrayHijos, $hijo["nombres"]);
             $ben = $hijo["idbeneficiario"];
             $apo = $aporte -> aportesBeneficiario($ben, $ges);
             echo '<h5>' . $hijo["nombres"] . '</h5>';
@@ -49,24 +51,58 @@
                     <span '; if($apo -> dic === 'p') { echo 'class="cumplido"';} echo '>Diciembre</span>
                 </div>';
         }
-        
-        echo '<div class="fila">
-                <div>
-                    <h4>Revisones medicas</h4>
-                    <div class="fila">
-                        <span '; if($consulta -> rm1 === 'p') { echo 'class="cumplido"';} echo '>Hijo 1</span>
-                        <span '; if($consulta -> rm2 === 'p') { echo 'class="cumplido"';} echo '>Hijo 2</span>
-                        <span '; if($consulta -> rm3 === 'p') { echo 'class="cumplido"';} echo '>Hijo 3</span>
-                    </div>
+
+        if (count($arrayHijos) === 3) {
+            echo '<div class="fila">
+            <div>
+                <h4>Revisones medicas</h4>
+                <div class="fila">
+                    <span '; if($consulta -> rm1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                    <span '; if($consulta -> rm2 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[1] .'</span>
+                    <span '; if($consulta -> rm3 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[2] .'</span>
                 </div>
-                <div>
-                    <h4>Kermesse</h4>
-                    <div class="fila">
-                        <span '; if($consulta -> k1 === 'p') { echo 'class="cumplido"';} echo '>hijo 1</span>
-                        <span '; if($consulta -> k2 === 'p') { echo 'class="cumplido"';} echo '>Hijo 2</span>
-                        <span '; if($consulta -> k3 === 'p') { echo 'class="cumplido"';} echo '>Hijo 3</span>
-                    </div>
+            </div>
+            <div>
+                <h4>Kermesse</h4>
+                <div class="fila">
+                    <span '; if($consulta -> k1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                    <span '; if($consulta -> k2 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[1] .'</span>
+                    <span '; if($consulta -> k3 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[2] .'</span>
                 </div>
+            </div>
             </div>';
+        } else if (count($arrayHijos) === 2) {
+            echo '<div class="fila">
+            <div>
+                <h4>Revisones medicas</h4>
+                <div class="fila">
+                    <span '; if($consulta -> rm1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                    <span '; if($consulta -> rm2 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[1] .'</span>
+                </div>
+            </div>
+            <div>
+                <h4>Kermesse</h4>
+                <div class="fila">
+                    <span '; if($consulta -> k1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                    <span '; if($consulta -> k2 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[1] .'</span>
+                </div>
+            </div>
+            </div>';
+        } else {
+            echo '<div class="fila">
+            <div>
+                <h4>Revisones medicas</h4>
+                <div class="fila">
+                    <span '; if($consulta -> rm1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                </div>
+            </div>
+            <div>
+                <h4>Kermesse</h4>
+                <div class="fila">
+                    <span '; if($consulta -> k1 === 'p') { echo 'class="cumplido"';} echo '>' . $arrayHijos[0] .'</span>
+                </div>
+            </div>
+            </div>';
+        }
     }
 ?>

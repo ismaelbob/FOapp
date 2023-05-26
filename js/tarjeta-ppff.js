@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $('#btnbuscar').click((event) => {
+        alertify.set('notifier','position', 'top-right');
         event.preventDefault()
         if ($('#txtcodigo').val() !== '') {
             $.ajax({
@@ -20,13 +21,14 @@ $(document).ready(() => {
                             }
                         })
                     } else {
-                        $('#msg-error').html(respuesta)
+                        alertify.error(respuesta)
+                        $('#pnl-datos').html('<div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div><div class="esqueleton-corto"></div>')
+                        $('#pnl-tarjeta').html('<div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div><div class="esqueleton-corto"></div><div class="esqueleton-titulo"></div><div class="esqueleton-largo"></div>')
                     }
                 }
             })
         } else {
-            $('#msg-error').html('Ingrese un codigo para buscar')
-            $('#txtcodigo').focus()
+            alertify.error('Ingrese un codigo para buscar')
         }
     })
 })
