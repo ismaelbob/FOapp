@@ -12,7 +12,11 @@
             $con = null;
         }
         function registrarAporte($idaporte, $mes, $valor) {
-            $this -> conectar() -> query("UPDATE aporte SET $mes='$valor' WHERE idaporte=$idaporte;");          
+            $this -> conectar() -> query("UPDATE aporte SET $mes='$valor' WHERE idaporte=$idaporte;");      
+        }
+
+        function cambiarAporteAnual($ben, $gestion, $valor) {
+            $this -> conectar() -> query("UPDATE aporte SET ene='$valor', feb='$valor', mar='$valor', abr='$valor', may='$valor', jun='$valor', jul='$valor', ago='$valor', sep='$valor', oct='$valor', nov='$valor', dic='$valor' WHERE idbeneficiario=$ben AND gestion=$gestion;");
         }
     }
 ?>

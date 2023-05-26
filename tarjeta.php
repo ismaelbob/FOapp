@@ -119,7 +119,7 @@
                         <label for="chkapo1-11">N</label>
                         <label for="chkapo1-12">D</label>
                     </div>
-                    <div class="fila-apo1">
+                    <div class="fila-apo1" id="fila-apo1">
                         <input value="ene" type="checkbox" name="chkapo1-1" id="chkapo1-1"/>
                         <input value="feb" type="checkbox" name="chkapo1-2" id="chkapo1-2"/>
                         <input value="mar" type="checkbox" name="chkapo1-3" id="chkapo1-3"/>
@@ -153,7 +153,7 @@
                         <label for="chkapo2-11">N</label>
                         <label for="chkapo2-12">D</label>
                     </div>
-                    <div class="fila-apo2">
+                    <div class="fila-apo2" id="fila-apo2">
                         <input value="ene" type="checkbox" name="chkapo2-1" id="chkapo2-1"/>
                         <input value="feb" type="checkbox" name="chkapo2-2" id="chkapo2-2"/>
                         <input value="mar" type="checkbox" name="chkapo2-3" id="chkapo2-3"/>
@@ -187,7 +187,7 @@
                         <label for="chkapo3-11">N</label>
                         <label for="chkapo3-12">D</label>
                     </div>
-                    <div class="fila-apo3">
+                    <div class="fila-apo3" id="fila-apo3">
                         <input value="ene" type="checkbox" name="chkapo3-1" id="chkapo3-1"/>
                         <input value="feb" type="checkbox" name="chkapo3-2" id="chkapo3-2"/>
                         <input value="mar" type="checkbox" name="chkapo3-3" id="chkapo3-3"/>
@@ -205,14 +205,14 @@
                 <h5>Otros</h5>
                 <div class="columna">
                     <div class="fila-participaciones">
-                        <div><label for="chkrv-1">Rev. Medica</label><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/></div>
-                        <div><label for="chkrv-2">Rev. Medica</label><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/></div>
-                        <div><label for="chkrv-3">Rev. Medica</label><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/></div>
+                        <div class="fila-apo1"><label for="chkrv-1">Rev. Medica</label><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/></div>
+                        <div class="fila-apo2"><label for="chkrv-2">Rev. Medica</label><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/></div>
+                        <div class="fila-apo3"><label for="chkrv-3">Rev. Medica</label><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/></div>
                     </div>
                     <div class="fila-participaciones">
-                        <div><label for="chkkm-1">Kermesse</label><input value="k1" type="checkbox" id="chkkm-1" name="chkkm-1"/></div>
-                        <div><label for="chkkm-2">Kermesse</label><input value="k2" type="checkbox" id="chkkm-2" name="chkkm-2"/></div>
-                        <div><label for="chkkm-3">Kermesse</label><input value="k3" type="checkbox" id="chkkm-3" name="chkkm-3"/></div>
+                        <div class="fila-apo1"><label for="chkkm-1">Kermesse</label><input value="k1" type="checkbox" id="chkkm-1" name="chkkm-1"/></div>
+                        <div class="fila-apo2"><label for="chkkm-2">Kermesse</label><input value="k2" type="checkbox" id="chkkm-2" name="chkkm-2"/></div>
+                        <div class="fila-apo3"><label for="chkkm-3">Kermesse</label><input value="k3" type="checkbox" id="chkkm-3" name="chkkm-3"/></div>
                     </div>
                 </div>
             </div>

@@ -40,8 +40,10 @@ $(document).ready(() => {
                                     colocarCheck(aportes1.dic, $('#chkapo1-12'))
                                 },
                             })
-                            cambiarCheck($('#chkapo2-1'), $('#chkapo2-2'), $('#chkapo2-3'), $('#chkapo2-4'), $('#chkapo2-5'), $('#chkapo2-6'), $('#chkapo2-7'), $('#chkapo2-8'), $('#chkapo2-9'), $('#chkapo2-10'), $('#chkapo2-11'), $('#chkapo2-12'), false)
-                            cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
+
+                            $('.fila-apo2 input[type="checkbox"]').prop('checked', false)
+                            $('.fila-apo3 input[type="checkbox"]').prop('checked', false)
+
                             $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo2 input[type="checkbox"]').prop('disabled', true)
                             $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
@@ -95,7 +97,8 @@ $(document).ready(() => {
                                 },
                             })
 
-                            cambiarCheck($('#chkapo3-1'), $('#chkapo3-2'), $('#chkapo3-3'), $('#chkapo3-4'), $('#chkapo3-5'), $('#chkapo3-6'), $('#chkapo3-7'), $('#chkapo3-8'), $('#chkapo3-9'), $('#chkapo3-10'), $('#chkapo3-11'), $('#chkapo3-12'), false)
+                            $('.fila-apo3 input[type="checkbox"]').prop('checked', false)
+
                             $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo2 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
@@ -268,6 +271,16 @@ $(document).ready(() => {
     $('#chkkm-1').click(() => {actualizarParticipacionEnBD($('#chkkm-1'), data)})
     $('#chkkm-2').click(() => {actualizarParticipacionEnBD($('#chkkm-2'), data)})
     $('#chkkm-3').click(() => {actualizarParticipacionEnBD($('#chkkm-3'), data)})
+
+    $('#chkfull-hijo1').click(() => {
+        cambiarTodoCheck($('#fila-apo1 input[type="checkbox"]'), $('#chkfull-hijo1'), datos[0].idbeneficiario)
+    })
+    $('#chkfull-hijo2').click(() => {
+        cambiarTodoCheck($('#fila-apo2 input[type="checkbox"]'), $('#chkfull-hijo2'), datos[1].idbeneficiario)
+    })
+    $('#chkfull-hijo3').click(() => {
+        cambiarTodoCheck($('#fila-apo3 input[type="checkbox"]'), $('#chkfull-hijo3'), datos[2].idbeneficiario)
+    })
     
     //Funciones para optimizar el codigo
     function colocarCheck (valor, idcheck) {
@@ -341,19 +354,37 @@ $(document).ready(() => {
         }
     }
 
-    function cambiarCheck (ck1, ck2, ck3, ck4, ck5, ck6, ck7, ck8, ck9, ck10, ck11, ck12, estado) {
-        ck1.prop('checked', estado)
-        ck2.prop('checked', estado)
-        ck3.prop('checked', estado)
-        ck4.prop('checked', estado)
-        ck5.prop('checked', estado)
-        ck6.prop('checked', estado)
-        ck7.prop('checked', estado)
-        ck8.prop('checked', estado)
-        ck9.prop('checked', estado)
-        ck10.prop('checked', estado)
-        ck11.prop('checked', estado)
-        ck12.prop('checked', estado)
+    function cambiarTodoCheck (grupock, ck, cod) {
+        alertify.set('notifier','position', 'top-right');
+        if ($(ck).prop('checked')) {
+            $.ajax({
+                data: 'cod=' + cod + '&valor=p',
+                url: 'procesos/reg-todo-aporte.php',
+                type: 'post',
+                success: (res) => {
+                    if(res === 'Correcto') {
+                        $(grupock).prop('checked', true)
+                        alertify.success(`Actualizado: cod ${cod} pagado toda la gestion`)
+                    } else {
+                        alertify.error(res)
+                    }
+                }
+            })
+        } else {
+            $.ajax({
+                data: 'cod=' + cod + '&valor=f',
+                url: 'procesos/reg-todo-aporte.php',
+                type: 'post',
+                success: (res) => {
+                    if(res === 'Correcto') {
+                        $(grupock).prop('checked', false)
+                        alertify.success(`Actualizado: cod ${cod} NO pagado toda la gestion`)
+                    } else {
+                        alertify.error(res)
+                    }
+                }
+            })
+        }
 
     }
 
