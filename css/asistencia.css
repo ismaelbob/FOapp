@@ -117,4 +117,7 @@
         padding: 1em;
         background-color: rgb(233, 235, 234);
     }
+    .popup-2{
+        width: 650px;
+    }
 }

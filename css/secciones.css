@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif   ;
 }
 
 .container {
@@ -12,6 +13,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    padding-bottom: 1em;
 }
 .pnl_principal h4 {
     padding: 0;
@@ -20,6 +22,7 @@
     font-weight: normal;
     color: #159284;
     font-weight: 600;
+    font-size: 20px;
 }
 .pnl_principal h5 {
     padding: 0;
@@ -27,7 +30,14 @@
     color: #159284;
     display: inline-block;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
+}
+.pnl_principal h3 {
+    padding: 0;
+    margin: 0 0 0 .7em;
+    font-weight: 500;
+    font-size: 16px;
+    color: #27b0a2;
 }
 
 
@@ -40,12 +50,12 @@
 }
 .pnl_datos input[type="number"] {
     width: 90%;
-    margin-bottom: 5px;
-    padding: .5em;
+    margin: 0 0 5px 0;
+    padding: .54em;
     border: 1px solid gray;
     border-radius: 3px 0px 0px 3px;
 }
-.pnl_datos input[type="button"] {
+.pnl_datos input[type="submit"] {
     width: 100%;
     background-color: #27b0a2;
     padding: .5em;
@@ -54,7 +64,7 @@
     border: none;
     border-radius: 3px;
 }
-.pnl_datos input[type="button"]:hover {
+.pnl_datos input[type="submit"]:hover {
     background-color: #159284;
 }
 .pnl_datos .linea {
@@ -99,6 +109,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .pnl_tarjeta .columna {
     display: flex;
     justify-content: space-between;
@@ -109,23 +120,24 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: auto;
 }
-.pnl_principal .columna div div {
+.pnl_tarjeta .columna div .fila-participacion {
     display: flex;
     flex-direction: row;
-    margin-right: .5em;
+    justify-content: flex-start;
     margin-bottom: .5em;
+    width: 100%;
 }
-.pnl_principal .columna div div label {
-    margin-right: .3em;
+.pnl_tarjeta .columna div .fila-participacion label {
+    margin-left: .2em;
 }
+
 
 .pnl_tarjeta input[type="checkbox"] {
     margin: 0;
     padding: 0;
 }
-
-
 
 .btn-edit {
     width: 60%;
@@ -137,10 +149,11 @@
     background-color: rgb(255, 163, 59);
     border: 1px solid gray;
     border-left: 0px;
-    width: 10%;
+    width: 20%;
     cursor: pointer;
-    padding: .5em 0em;
+    padding: .35em .4em;
     border-radius: 0px 3px 3px 0px;
+    margin: 0;
 }
 .btn-popup:hover {
     background-color: rgb(253, 151, 33);
@@ -161,14 +174,14 @@
     }
     .pnl_datos {
         width: 22.3%;
-        height: 90%;
+        height: 95%;
         margin: 10px;
         padding: 1em;
         background-color: #f8f8f8;
     }
     .pnl_tarjeta {
         width: 60%;
-        height: 90%;
+        height: 95%;
         margin: 10px 0px;
         padding: 1em;
         background-color: #f8f8f8;
@@ -194,8 +207,21 @@
     .pnl_tarjeta .columna div {
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
+        width: 50%;
     }
+    .pnl_tarjeta .columna div .fila-participacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: .5em;
+        width: 100%;
+    }
+    .pnl_tarjeta .columna div .fila-participacion label {
+        margin-left: .5em;
+    }
+    
+
 
     .popup-2{
         width: 650px;
@@ -206,6 +232,16 @@
     }
     .boton-4{
         width: 24.5%;
+    }
+    .btn-popup {
+        background-color: rgb(255, 163, 59);
+        border: 1px solid gray;
+        border-left: 0px;
+        width: 20%;
+        cursor: pointer;
+        padding: .4em .7em;
+        border-radius: 0px 3px 3px 0px;
+        margin: 0;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -220,14 +256,14 @@
     }
     .pnl_datos {
         width: 27%;
-        height: 90%;
+        height: 95%;
         margin: 10px;
         padding: 1em;
         background-color: #f8f8f8;
     }
     .pnl_tarjeta {
         width: 70.6%;
-        height: 90%;
+        height: 95%;
         margin: 10px 10px 10px 0px;
         padding: 1em;
         background-color: #f8f8f8;
@@ -253,8 +289,20 @@
     .pnl_tarjeta .columna div {
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
+        width: 50%;
     }
+    .pnl_tarjeta .columna div .fila-participacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: .5em;
+        width: 100%;
+    }
+    .pnl_tarjeta .columna div .fila-participacion label {
+        margin-left: .5em;
+    }
+
     .popup-2{
         width: 650px;
     }
@@ -264,6 +312,16 @@
     }
     .boton-4{
         width: 24.5%;
+    }
+    .btn-popup {
+        background-color: rgb(255, 163, 59);
+        border: 1px solid gray;
+        border-left: 0px;
+        width: 20%;
+        cursor: pointer;
+        padding: .4em .7em;
+        border-radius: 0px 3px 3px 0px;
+        margin: 0;
     }
 }
 
@@ -281,14 +339,14 @@
     }
     .pnl_datos {
         width: 30%;
-        height: 63%;
+        height: 67%;
         margin: 10px;
         padding: 1em;
         background-color: #f8f8f8;
     }
     .pnl_tarjeta {
         width: 68%;
-        height: 63%;
+        height: 67%;
         margin: 10px 10px 10px 0px;
         padding: 1em;
         background-color: #f8f8f8;
@@ -311,11 +369,23 @@
         background-color: white;
         padding: 1em;
     }
-    .pnl_tarjeta .columna div {
+    .pnl_tarjeta .columna  div {
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
+        width: 50%;
     }
+    .pnl_tarjeta .columna div .fila-participacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: .5em;
+        width: 100%;
+    }
+    .pnl_tarjeta .columna div .fila-participacion label {
+        margin-left: .5em;
+    }
+
     .popup-2{
         width: 650px;
     }
@@ -325,6 +395,16 @@
     }
     .boton-4{
         width: 24.5%;
+    }
+    .btn-popup {
+        background-color: rgb(255, 163, 59);
+        border: 1px solid gray;
+        border-left: 0px;
+        width: 20%;
+        cursor: pointer;
+        padding: .4em .7em;
+        border-radius: 0px 3px 3px 0px;
+        margin: 0;
     }
 }
 

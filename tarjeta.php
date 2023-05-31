@@ -39,10 +39,13 @@
         <div class="pnl_principal">
             <div class="pnl_datos">
                 <h4>Datos</h4>
-                <div>
-                    <div><input type="number" name="txtcodigo" id="txtcodigo"/><button id="btn-buscar" class="btn-popup">...</button></div>
-                    <input id="btnbuscar" type="button" value="Buscar">
-                </div>
+                <form id="form-buscar">
+                    <div>
+                        <input type="number" name="txtcodigo" id="txtcodigo"/>
+                        <i id="btn-buscar" class="btn-popup">...</i>
+                    </div>
+                    <input id="btnbuscar" type="submit" value="Buscar">
+                </form>
                 <div>
                     <p>
                         <div class="linea"><h5>ID de familia:</h5><span id="idhogar"></span></div>
@@ -51,9 +54,9 @@
                     </p>
                     <p>
                         <div class="linea"><h5>Hijos inscritos:</h5><span id="cantidad"></span></div>
-                        <div class="linea"><h5>Hijo 1:</h5><span id="hijo1"></span></div>
-                        <div class="linea"><h5>Hijo 2:</h5><span id="hijo2"></span></div>
-                        <div class="linea"><h5>Hijo 3:</h5><span id="hijo3"></span></div>
+                        <div class="linea"><h3 id="cod1">Hijo 1:</h3><span id="hijo1"></span></div>
+                        <div class="linea"><h3 id="cod2">Hijo 2:</h3><span id="hijo2"></span></div>
+                        <div class="linea"><h3 id="cod3">Hijo 3:</h3><span id="hijo3"></span></div>
                     </p>
                     <p>
                         <div class="linea"><h5>Telefono 1:</h5><span id="tel1"></span></div>
@@ -67,7 +70,7 @@
                 <h4>Mi Tarjeta</h4>
                 <div class="fila-titulo">
                     <h5>Reuniones</h5>
-                    <div class="fila-participaciones"><label for="chkfull-reu">Marcar todo</label><input type="checkbox" id="chkfull-reu" name="chkfull-reu"/></div>
+                    <div class="fila-reuniones"><label for="chkfull-reu">Marcar todo</label><input type="checkbox" id="chkfull-reu" name="chkfull-reu"/></div>
                 </div>
                 <div class="fila">
                     <div>
@@ -84,7 +87,7 @@
                         <label for="chkreunion-11">N</label>
                         <label for="chkreunion-12">D</label>
                     </div>
-                    <div class="fila-participaciones">
+                    <div class="fila-reuniones">
                         <input value="r1" type="checkbox" name="chkreunion-1" id="chkreunion-1"/>
                         <input value="r2" type="checkbox" name="chkreunion-2" id="chkreunion-2"/>
                         <input value="r3" type="checkbox" name="chkreunion-3" id="chkreunion-3"/>
@@ -100,11 +103,11 @@
                     </div>
                 </div>
                 <h5>Aportes</h5>
-                <div class="fila-titulo">
-                    <h5>Hijo 1</h5>
+                <div class="fila-titulo fila-hijo1">
+                    <h3 id="fila-apo-hijo1">Hijo 1</h3>
                     <div class="fila-apo1"><label for="chkfull-hijo1">Marcar todo</label><input type="checkbox" id="chkfull-hijo1" name="chkfull-hijo1"/></div>
                 </div>
-                <div class="fila">
+                <div class="fila fila-hijo1">
                     <div>
                         <label for="chkapo1-1">E</label>
                         <label for="chkapo1-2">F</label>
@@ -134,11 +137,11 @@
                         <input value="dic" type="checkbox" name="chkapo1-12" id="chkapo1-12"/>
                     </div>
                 </div>
-                <div class="fila-titulo">
-                    <h5>Hijo 2</h5>
+                <div class="fila-titulo fila-hijo2">
+                    <h3 id="fila-apo-hijo2">Hijo 2</h3>
                     <div class="fila-apo2"><label for="chkfull-hijo2">Marcar todo</label><input type="checkbox" id="chkfull-hijo2" name="chkfull-hijo2"/></div>
                 </div>
-                <div class="fila">
+                <div class="fila fila-hijo2">
                     <div>
                         <label for="chkapo2-1">E</label>
                         <label for="chkapo2-2">F</label>
@@ -168,11 +171,11 @@
                         <input value="dic" type="checkbox" name="chkapo2-12" id="chkapo2-12"/>
                     </div>
                 </div>
-                <div class="fila-titulo">
-                    <h5>Hijo 3</h5>
+                <div class="fila-titulo fila-hijo3">
+                    <h3 id="fila-apo-hijo3">Hijo 3</h3>
                     <div class="fila-apo3"><label for="chkfull-hijo3">Marcar todo</label><input type="checkbox" id="chkfull-hijo3" name="chkfull-hijo3"/></div>
                 </div>
-                <div class="fila">
+                <div class="fila fila-hijo3">
                     <div>
                         <label for="chkapo3-1">E</label>
                         <label for="chkapo3-2">F</label>
@@ -202,19 +205,24 @@
                         <input value="dic" type="checkbox" name="chkapo3-12" id="chkapo3-12"/>
                     </div>
                 </div>
-                <h5>Otros</h5>
-                <div class="columna">
-                    <div class="fila-participaciones">
-                        <div class="fila-apo1"><label for="chkrv-1">Rev. Medica</label><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/></div>
-                        <div class="fila-apo2"><label for="chkrv-2">Rev. Medica</label><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/></div>
-                        <div class="fila-apo3"><label for="chkrv-3">Rev. Medica</label><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/></div>
+               <div class="columna">
+                    <div>
+                        <h5>Revision Medica</h5>
+                        <div>
+                            <div class="fila-apo1 fila-hijo1 fila-participacion"><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/><label id="fila-rev-hijo1" for="chkrv-1">Hijo 1</label></div>
+                            <div class="fila-apo2 fila-hijo2 fila-participacion"><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/><label id="fila-rev-hijo2" for="chkrv-2">Hijo 2</label></div>
+                            <div class="fila-apo3 fila-hijo3 fila-participacion"><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/><label id="fila-rev-hijo3" for="chkrv-3">Hijo 3</label></div>
+                        </div>
                     </div>
-                    <div class="fila-participaciones">
-                        <div class="fila-apo1"><label for="chkkm-1">Kermesse</label><input value="k1" type="checkbox" id="chkkm-1" name="chkkm-1"/></div>
-                        <div class="fila-apo2"><label for="chkkm-2">Kermesse</label><input value="k2" type="checkbox" id="chkkm-2" name="chkkm-2"/></div>
-                        <div class="fila-apo3"><label for="chkkm-3">Kermesse</label><input value="k3" type="checkbox" id="chkkm-3" name="chkkm-3"/></div>
+                    <div>
+                        <h5>Kermesse</h5>
+                        <div>
+                            <div class="fila-apo1 fila-hijo1 fila-participacion"><input value="k1" type="checkbox" id="chkkm-1" name="chkkm-1"/><label id="fila-ker-hijo1" for="chkkm-1">Hijo 1</label></div>
+                            <div class="fila-apo2 fila-hijo2 fila-participacion"><input value="k2" type="checkbox" id="chkkm-2" name="chkkm-2"/><label id="fila-ker-hijo2" for="chkkm-2">Hijo 2</label></div>
+                            <div class="fila-apo3 fila-hijo3 fila-participacion "><input value="k3" type="checkbox" id="chkkm-3" name="chkkm-3"/><label id="fila-ker-hijo3" for="chkkm-3">Hijo 3</label></div>
+                        </div>
                     </div>
-                </div>
+               </div>
             </div>
         </div>
     </div>

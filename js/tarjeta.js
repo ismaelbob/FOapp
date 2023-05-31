@@ -1,5 +1,7 @@
 $(document).ready(() => {
-    $('#btnbuscar').click(() => {
+
+    $('#btnbuscar').click((event) => {
+        event.preventDefault()
         if ($('#txtcodigo').val() !== '') {
             $.ajax({
                 data: 'cod=' + $('#txtcodigo').val(),
@@ -18,7 +20,14 @@ $(document).ready(() => {
                             $('#hijo1').html(nombrehijo1)
                             $('#hijo2').html('')
                             $('#hijo3').html('')
+                            $('#cod1').html(datos[0].idbeneficiario)
+                            $('#cod2').html('')
+                            $('#cod3').html('')
                             $('#cantidad').html('1')
+
+                            $('#fila-apo-hijo1').html(datos[0].nombres)
+                            $('#fila-rev-hijo1').html(datos[0].nombres)
+                            $('#fila-ker-hijo1').html(datos[0].nombres)
 
                             $.ajax({
                                 data: 'cod=' + datos[0].idbeneficiario,
@@ -47,6 +56,9 @@ $(document).ready(() => {
                             $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo2 input[type="checkbox"]').prop('disabled', true)
                             $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
+
+                            $('.fila-hijo2').hide()
+                            $('.fila-hijo3').hide()
                         }
                         if (datos.length === 2) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -54,7 +66,17 @@ $(document).ready(() => {
                             nombrehijo2 = datos[1].nombres + ' ' + datos[1].paterno + ' ' + datos[1].materno
                             $('#hijo2').html(nombrehijo2)
                             $('#hijo3').html('')
+                            $('#cod1').html(datos[0].idbeneficiario)
+                            $('#cod2').html(datos[1].idbeneficiario)
+                            $('#cod3').html('')
                             $('#cantidad').html('2')
+
+                            $('#fila-apo-hijo1').html(datos[0].nombres)
+                            $('#fila-rev-hijo1').html(datos[0].nombres)
+                            $('#fila-ker-hijo1').html(datos[0].nombres)
+                            $('#fila-apo-hijo2').html(datos[1].nombres)
+                            $('#fila-rev-hijo2').html(datos[1].nombres)
+                            $('#fila-ker-hijo2').html(datos[1].nombres)
 
                             $.ajax({
                                 data: 'cod=' + datos[0].idbeneficiario,
@@ -102,6 +124,9 @@ $(document).ready(() => {
                             $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo2 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo3 input[type="checkbox"]').prop('disabled', true)
+
+                            $('.fila-hijo2').show()
+                            $('.fila-hijo3').hide()
                         }
                         if (datos.length === 3) {
                             nombrehijo1 = datos[0].nombres + ' ' + datos[0].paterno + ' ' + datos[0].materno
@@ -110,7 +135,20 @@ $(document).ready(() => {
                             $('#hijo2').html(nombrehijo2)
                             nombrehijo3 = datos[2].nombres + ' ' + datos[2].paterno + ' ' + datos[2].materno
                             $('#hijo3').html(nombrehijo3)
+                            $('#cod1').html(datos[0].idbeneficiario)
+                            $('#cod2').html(datos[1].idbeneficiario)
+                            $('#cod3').html(datos[2].idbeneficiario)
                             $('#cantidad').html('3')
+
+                            $('#fila-apo-hijo1').html(datos[0].nombres)
+                            $('#fila-rev-hijo1').html(datos[0].nombres)
+                            $('#fila-ker-hijo1').html(datos[0].nombres)
+                            $('#fila-apo-hijo2').html(datos[1].nombres)
+                            $('#fila-rev-hijo2').html(datos[1].nombres)
+                            $('#fila-ker-hijo2').html(datos[1].nombres)
+                            $('#fila-apo-hijo3').html(datos[2].nombres)
+                            $('#fila-rev-hijo3').html(datos[2].nombres)
+                            $('#fila-ker-hijo3').html(datos[2].nombres)
 
                             $.ajax({
                                 data: 'cod=' + datos[0].idbeneficiario,
@@ -176,6 +214,9 @@ $(document).ready(() => {
                             $('.fila-apo1 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo2 input[type="checkbox"]').prop('disabled', false)
                             $('.fila-apo3 input[type="checkbox"]').prop('disabled', false)
+
+                            $('.fila-hijo2').show()
+                            $('.fila-hijo3').show()
                         }
 
                         $.ajax({
@@ -208,7 +249,8 @@ $(document).ready(() => {
                             },
                         })
 
-                        $('.fila-participaciones input[type="checkbox"]').prop('disabled', false)
+                        $('.fila-reuniones input[type="checkbox"]').prop('disabled', false)
+                        $('#txtcodigo').blur()
                     } else {
                         alertify.set('notifier','position', 'top-right');
                         alertify.error('El codigo ingresado, no existe')
