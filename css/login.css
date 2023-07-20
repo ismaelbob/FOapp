@@ -31,7 +31,7 @@
 }
 .cajon-login .contenido-abajo{
     padding: 15px;
-    background-color: rgba(128, 128, 128, 0.178);
+    background-color: rgba(128, 128, 128, 0.247);
 }
 .cajon-login .contenido-abajo input[type="submit"]{
     width: 100%;
@@ -56,4 +56,21 @@
 .img img{
     width: 100%;
     border-radius: 50%;
+}
+
+.link-externo {
+    background-color: rgb(17, 123, 172);
+    position: absolute;
+    bottom: -70px;
+    left: 35px;
+    padding: 10px 0;
+    width: 180px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link-externo:hover{
+    background-color: rgb(14, 103, 145);
+    transition: .5s ease all;
 }

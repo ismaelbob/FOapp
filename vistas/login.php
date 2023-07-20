@@ -17,14 +17,15 @@
                 <div class="contenido-central">
                 <h3>Iniciar sesion</h3>
                     <label for="txtusuario">Usuario:</label>
-                    <input type="text" name="txtusuario" id="txtusuario"/>
+                    <input type="text" name="txtusuario" id="txtusuario" required/>
                     <label for="txtpassword">Contraseña:</label>
-                    <input type="password" name="txtpassword" id="txtpassword"/>
+                    <input type="password" name="txtpassword" id="txtpassword" required/>
                 </div>
                 <div class="contenido-abajo">
                     <input type="submit" value="Acceder"/>
                 </div>
            </form>
+           <a class="link-externo" href="../mitarjeta/">Mi Tarjeta</a>
         </div>
     </div>
 </body>
