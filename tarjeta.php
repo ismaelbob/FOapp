@@ -238,6 +238,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay-procesando" id="overlay-procesando"><div><div class="cargando"></div></div></div>
 </body>
 <script src="js/tarjeta.js"></script>
 </html>

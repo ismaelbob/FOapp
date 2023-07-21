@@ -406,6 +406,9 @@ $(document).ready(() => {
                 data: 'cod=' + cod + '&valor=p',
                 url: 'procesos/reg-todo-aporte.php',
                 type: 'post',
+                beforeSend: () => {
+                    $('#overlay-procesando').css('visibility', 'visible')
+                },
                 success: (res) => {
                     if(res === 'Correcto') {
                         $(grupock).prop('checked', true)
@@ -413,6 +416,7 @@ $(document).ready(() => {
                     } else {
                         alertify.error(res)
                     }
+                    $('#overlay-procesando').css('visibility', 'hidden')
                 }
             })
         } else {
@@ -420,6 +424,9 @@ $(document).ready(() => {
                 data: 'cod=' + cod + '&valor=f',
                 url: 'procesos/reg-todo-aporte.php',
                 type: 'post',
+                beforeSend: () => {
+                    $('#overlay-procesando').css('visibility', 'visible')
+                },
                 success: (res) => {
                     if(res === 'Correcto') {
                         $(grupock).prop('checked', false)
@@ -427,6 +434,7 @@ $(document).ready(() => {
                     } else {
                         alertify.error(res)
                     }
+                    $('#overlay-procesando').css('visibility', 'hidden')
                 }
             })
         }
