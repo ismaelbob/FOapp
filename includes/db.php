@@ -12,6 +12,12 @@
             $this->pass = "";
             $this->database = "fundacion";
             $this->charset = "utf8mb4";
+
+            // $this->servidor = "localhost";
+            // $this->usuario = "id20856719_ismael";
+            // $this->pass = "Fundo703.";
+            // $this->database = "id20856719_fundacion";
+            // $this->charset = "utf8mb4";
         }
 
         public function conectar(){

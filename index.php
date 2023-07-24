@@ -8,4 +8,15 @@
     } else {
         header('Location: vistas/login.php');
     }
+
+    // include 'includes/sesiones.php';
+    // $sesiones = new Sesiones();
+
+    // $usuario = $_SESSION["userfund"];
+    
+    // if($usuario === '') {
+    //     echo '<a href="vistas/login.php">Iniciar sesion</a>';
+    // } else {
+    //     header('location: tarjeta.php');
+    // }
 ?>
