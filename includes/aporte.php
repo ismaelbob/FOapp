@@ -16,7 +16,7 @@
         }
 
         function cambiarAporteAnual($ben, $gestion, $valor) {
-            $this -> conectar() -> query("UPDATE aporte SET ene='$valor', feb='$valor', mar='$valor', abr='$valor', may='$valor', jun='$valor', jul='$valor', ago='$valor', sep='$valor', oct='$valor', nov='$valor', dic='$valor' WHERE idbeneficiario=$ben AND gestion=$gestion;");
+            $this -> conectar() -> query("UPDATE aporte SET ene='$valor', feb='$valor', mar='$valor', abr='$valor', may='$valor', jun='$valor', jul='$valor', ago='$valor', sep='$valor', oct='$valor', nov='$valor', dic='$valor' WHERE idbeneficiario='$ben' AND gestion=$gestion;");
         }
     }
 ?>

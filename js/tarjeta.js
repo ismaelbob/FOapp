@@ -414,9 +414,10 @@ $(document).ready(() => {
 
     function cambiarTodoCheck (grupock, ck, cod) {
         alertify.set('notifier','position', 'top-right');
+        const codigoInt = parseInt(cod)
         if ($(ck).prop('checked')) {
             $.ajax({
-                data: 'cod=' + cod + '&valor=p',
+                data: 'cod=' + codigoInt + '&valor=p',
                 url: 'procesos/reg-todo-aporte.php',
                 type: 'post',
                 beforeSend: () => {
@@ -434,7 +435,7 @@ $(document).ready(() => {
             })
         } else {
             $.ajax({
-                data: 'cod=' + cod + '&valor=f',
+                data: 'cod=' + codigoInt + '&valor=f',
                 url: 'procesos/reg-todo-aporte.php',
                 type: 'post',
                 beforeSend: () => {

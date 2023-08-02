@@ -70,7 +70,9 @@
                 <h4>Mi Tarjeta</h4>
                 <div class="fila-titulo">
                     <h5>Reuniones</h5>
-                    <div class="fila-reuniones"><label for="chkfull-reu">Marcar todo</label><input type="checkbox" id="chkfull-reu" name="chkfull-reu"/></div>
+                    <div class="fila-reuniones">
+                        <!-- <label for="chkfull-reu">Marcar todo</label><input type="checkbox" id="chkfull-reu" name="chkfull-reu"/> -->
+                    </div>
                 </div>
                 <div class="fila">
                     <div>
