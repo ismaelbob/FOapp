@@ -17,6 +17,6 @@
     if($usuario === '') {
         echo '<a href="vistas/login.php">Iniciar sesion</a>';
     } else {
-        header('location: tarjeta.php');
+        header('location:tarjeta.php');
     }
 ?>
