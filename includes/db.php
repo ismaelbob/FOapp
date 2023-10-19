@@ -7,11 +7,11 @@
         private $charset;
 
         public function __construct(){
-            // $this->servidor = "localhost";
-            // $this->usuario = "root";
-            // $this->pass = "";
-            // $this->database = "fundacion";
-            // $this->charset = "utf8mb4";
+            $this->servidor = "localhost";
+            $this->usuario = "root";
+            $this->pass = "";
+            $this->database = "fundacion";
+            $this->charset = "utf8mb4";
 
             //PARA 000webhostapp
             // $this->servidor = "localhost";
@@ -21,11 +21,11 @@
             // $this->charset = "utf8mb4";
 
             //PARA railway
-            $this->servidor = "containers-us-west-37.railway.app";
-            $this->usuario = "root";
-            $this->pass = "Syl5rALuBAYKmxXRWykQ";
-            $this->database = "railway";
-            $this->charset = "utf8mb4";
+            // $this->servidor = "containers-us-west-37.railway.app";
+            // $this->usuario = "root";
+            // $this->pass = "Syl5rALuBAYKmxXRWykQ";
+            // $this->database = "railway";
+            // $this->charset = "utf8mb4";
         }
 
         public function conectar(){

@@ -101,7 +101,7 @@ $(document).ready(() => {
                     $('#cantidad').html('1')
 
                     $('#fila-apo-hijo1').html(datos[0].nombres)
-                    $('#fila-rev-hijo1').html(datos[0].nombres)
+                    //$('#fila-rev-hijo1').html(datos[0].nombres)
                     $('#fila-ker-hijo1').html(datos[0].nombres)
 
                     $.ajax({
@@ -147,10 +147,10 @@ $(document).ready(() => {
                     $('#cantidad').html('2')
 
                     $('#fila-apo-hijo1').html(datos[0].nombres)
-                    $('#fila-rev-hijo1').html(datos[0].nombres)
+                    //$('#fila-rev-hijo1').html(datos[0].nombres)
                     $('#fila-ker-hijo1').html(datos[0].nombres)
                     $('#fila-apo-hijo2').html(datos[1].nombres)
-                    $('#fila-rev-hijo2').html(datos[1].nombres)
+                    //$('#fila-rev-hijo2').html(datos[1].nombres)
                     $('#fila-ker-hijo2').html(datos[1].nombres)
 
                     $.ajax({
@@ -216,13 +216,13 @@ $(document).ready(() => {
                     $('#cantidad').html('3')
 
                     $('#fila-apo-hijo1').html(datos[0].nombres)
-                    $('#fila-rev-hijo1').html(datos[0].nombres)
+                    //$('#fila-rev-hijo1').html(datos[0].nombres)
                     $('#fila-ker-hijo1').html(datos[0].nombres)
                     $('#fila-apo-hijo2').html(datos[1].nombres)
-                    $('#fila-rev-hijo2').html(datos[1].nombres)
+                    //$('#fila-rev-hijo2').html(datos[1].nombres)
                     $('#fila-ker-hijo2').html(datos[1].nombres)
                     $('#fila-apo-hijo3').html(datos[2].nombres)
-                    $('#fila-rev-hijo3').html(datos[2].nombres)
+                    //$('#fila-rev-hijo3').html(datos[2].nombres)
                     $('#fila-ker-hijo3').html(datos[2].nombres)
 
                     $.ajax({

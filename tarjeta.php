@@ -209,11 +209,11 @@
                 </div>
                <div class="columna">
                     <div>
-                        <h5>Revision Medica</h5>
+                        <h5>Talleres</h5>
                         <div>
-                            <div class="fila-apo1 fila-hijo1 fila-participacion"><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/><label id="fila-rev-hijo1" for="chkrv-1">Hijo 1</label></div>
-                            <div class="fila-apo2 fila-hijo2 fila-participacion"><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/><label id="fila-rev-hijo2" for="chkrv-2">Hijo 2</label></div>
-                            <div class="fila-apo3 fila-hijo3 fila-participacion"><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/><label id="fila-rev-hijo3" for="chkrv-3">Hijo 3</label></div>
+                            <div class="fila-apo1 fila-participacion"><input value="rm1" type="checkbox" id="chkrv-1" name="chkrv-1"/><label id="fila-rev-hijo1" for="chkrv-1">Taller 1</label></div>
+                            <div class="fila-apo1 fila-participacion"><input value="rm2" type="checkbox" id="chkrv-2" name="chkrv-2"/><label id="fila-rev-hijo2" for="chkrv-2">Taller 2</label></div>
+                            <div class="fila-apo1 fila-participacion"><input value="rm3" type="checkbox" id="chkrv-3" name="chkrv-3"/><label id="fila-rev-hijo3" for="chkrv-3">Taller 3</label></div>
                         </div>
                     </div>
                     <div>
