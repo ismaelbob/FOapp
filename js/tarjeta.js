@@ -494,4 +494,11 @@ function seleccionarItem(item, nombres) {
     $('#overlay-popup').removeClass('activo')
 }
 
-
+$(document).keyup(function(e) {
+    if (e.key === "Escape") {
+        if ( $('#overlay-popup').hasClass('activo')) {
+            $('#popup-buscar').removeClass('activo')
+            $('#overlay-popup').removeClass('activo')
+        }
+   }
+});

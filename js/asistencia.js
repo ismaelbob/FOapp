@@ -17,10 +17,11 @@ $(document).ready(() => {
         $('#popup-buscar').removeClass('activo')
         $('#overlay-popup').removeClass('activo')
     })
-    /*$('#overlay-popup').click(() => {
-        $('#popup-buscar').removeClass('activo')
-        $('#overlay-popup').removeClass('activo')
-    })*/
+    // $('#overlay-popup').click((event) => {
+    //     $('#popup-buscar').removeClass('activo')
+    //     $('#overlay-popup').removeClass('activo')
+    //     console.log(event)
+    // })
     $('#txtcodigo').on('keyup', () => {
         if ($('#txtcodigo').val() !== '') {
             $.ajax({
@@ -95,5 +96,14 @@ function seleccionarMesEnCurso() {
     
     const valor = 'r' + mes
     $('#cmbmes').val(valor)
-    console.log(valor)
+    //console.log(valor)
 }
+
+$(document).keyup(function(e) {
+    if (e.key === "Escape") {
+        if ( $('#overlay-popup').hasClass('activo')) {
+            $('#popup-buscar').removeClass('activo')
+            $('#overlay-popup').removeClass('activo')
+        }
+   }
+});

@@ -64,7 +64,7 @@
                         <div class="linea"><h5>Barrio:</h5><span></span></div>
                     </p>
                 </div>
-                <div class="linea-r"><button class="btn-edit">Editar</button></div>
+                <!-- <div class="linea-r"><button class="btn-edit">Editar</button></div> -->
             </div>
             <div class="pnl_tarjeta">
                 <h4>Mi Tarjeta</h4>

@@ -55,7 +55,7 @@
                 </select>
                 <label for="txtcodigo">Codigo:</label>
                 <input type="number" name="txtcodigo" id="txtcodigo"/>
-                <button class="btn-buscar" id="btn-buscar">...</button>
+                <button class="btn-buscar" id="btn-buscar" type="button">...</button>
                 <label>Beneficiario:</label><span id="lblnombres"></span>
                 <input id="btn-registrar" type="submit" value="Registrar"/>
             </form>
