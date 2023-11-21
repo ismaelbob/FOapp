@@ -74,3 +74,18 @@
     background-color: rgb(14, 103, 145);
     transition: .5s ease all;
 }
+.link-externo2 {
+    position: absolute;
+    bottom: -120px;
+    left: 35px;
+    padding: 10px 0;
+    width: 180px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link-externo2:hover{
+    color: rgb(70, 70, 141);
+    transition: .5s ease all;
+}

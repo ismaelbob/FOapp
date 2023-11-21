@@ -26,6 +26,7 @@
                 </div>
            </form>
            <a class="link-externo" href="../mitarjeta/">Mi Tarjeta</a>
+           <a class="link-externo2" href="../micuenta/">Mi cuenta</a>
         </div>
     </div>
 </body>
